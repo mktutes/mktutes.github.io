@@ -1,0 +1,36 @@
++++
+title = "3.1: Process Management"
+weight = 10
++++
+
+#### Chapter X
+
+{{% notice warning %}}
+This topic is Yet to start...
+{{% /notice %}}
+
+## Introduction
+
+### List Own Processes 
+```bash
+$ ps
+
+  PID TTY           TIME CMD
+ 1529 ttys000    0:01.02 -bash
+81622 ttys007    0:02.12 -bash
+```
+
+### Suspend a process
+```bash
+$ sleep 10
+^Z
+[1]+  Stopped                 sleep 10
+```
+
+### Start as Background job
+```bash
+$ bg %1
+
+$ jobs
+[1]+  Running     sleep 10 &
+```

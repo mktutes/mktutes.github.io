@@ -1,0 +1,117 @@
++++
+title = '3.6: The "xargs" Command' 
+weight = 15
++++
+
+#### Chapter 16
+
+### Introduction
+The `xargs` command is used to construct arguments received from **standard input** and execute other commands. The input is read into fields using **space** and **newline** as delimiters. It uses `echo` as a default command and pass the standard output as argument to the echo command. We can override the default by passing the command we want to run as argument.
+
+
+### Basic Usage
+
+The **echo** command prints the argument on the screen.
+```bash
+$ echo {1..5}
+1 2 3 4 5
+```
+
+The **xargs** command uses **echo** as a default argument. Redirecting the echo command's input to xargs will behave exactlty like the echo command. If we add the echo after xargs explicitly, the output will be the same.
+```bash
+$ echo {1..5} | xargs
+1 2 3 4 5
+
+$ echo {1..5} | xargs echo
+1 2 3 4 5
+```
+
+### `-n NUM` : Construct command for every NUM arguments 
+The power of **xargs** comes from the options and its ability to accept other commands as argument. In the below example, the **-n** option takes one argument at a time from the redirected input and executes the command, In this case the echo command.
+
+> The **-n NUM** option takes **NUM** arguments from the input and pass it to the command. If there is no -n option, everything will be passed to the command as arguments in one go.
+
+```bash
+$ echo {1..5} | xargs -n1
+1
+2
+3
+4
+5
+```
+
+We can pass other commands as well. In the below example, we use the **printf** command to format the numbers, one at a time.
+
+```bash
+$ echo {1..5} | xargs -n1 printf "%07d\n"
+0000001
+0000002
+0000003
+0000004
+0000005
+```
+
+We can redirect the output of **xargs** into another xargs. Let us say, we want to format the numeric input using **printf** and then display 4 elements at a time. The first xargs with **-n 1** and printf formats each number and the second xargs with **-n 4** will display 4 numbers per line.
+
+```bash
+$ echo {1..16} | xargs -n1 printf "%07d\n" | xargs -n4
+0000001 0000002 0000003 0000004
+0000005 0000006 0000007 0000008
+0000009 0000010 0000011 0000012
+0000013 0000014 0000015 0000016
+```
+
+Let us say, we want to dynamically construct an **ls** command with required options coded in a file called **ls_opt.txt**. This can be accomplished by simply passing the output of **cat ls_opt.txt** to the xargs command with the **ls** command as argument.
+
+```bash
+$ cat ls_opt.txt
+-l
+-t
+-r
+
+$ cat ls_opt.txt | xargs ls
+total 16
+drwxr-xr-x  5 mktutes  staff  160 Sep 12 21:46 part-2
+drwxr-xr-x  3 mktutes  staff   96 Sep 12 21:51 part-4
+-rw-r--r--  1 mktutes  staff  623 Sep 15 15:00 _index.md
+drwxr-xr-x  7 mktutes  staff  224 Sep 17 08:27 part-1
+drwxr-xr-x  5 mktutes  staff  160 Sep 17 08:32 part-3
+-rw-r--r--  1 mktutes  staff    9 Sep 17 08:54 ls_opt.txt
+```
+
+### `-t`: Viewing the command created by `xargs`
+
+We can use the **-t** option to view the command that xargs constructed dynamically before executing it. Let us take the previous example using **xargs ls** and add the -t option. The dynamically constructed ls command is printed before the results of the ls command.
+
+```bash
+$ cat ls_opt.txt | xargs -t ls 
+ls -l -t -r
+
+total 16
+drwxr-xr-x  5 mktutes  staff  160 Sep 12 21:46 part-2
+drwxr-xr-x  3 mktutes  staff   96 Sep 12 21:51 part-4
+...
+...
+```
+
+### `-I {}`: Using an argument many times
+
+Sometimes, we need to use the argument more than once 
+in a given command; for example, if we want to backup all the **.txt** files in the current directory with **.bk** extension as suffix, the **-I {}** option will allow the argument to be substituted in all the places with **{}** as placeholder.
+
+```bash
+$ ls *.txt | xargs -I {} cp -v {} {}.bk
+ls_opt.txt -> ls_opt.txt.bk
+sample_01.txt -> sample_01.txt.bk
+sample_02.txt -> sample_02.txt.bk
+sample_03.txt -> sample_03.txt.bk
+sample_04.txt -> sample_04.txt.bk
+sample_05.txt -> sample_05.txt.bk
+```
+
+
+
+
+
+
+

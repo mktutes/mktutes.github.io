@@ -1,0 +1,125 @@
++++
+title = "4.1: The Basics"
+weight = 11
++++
+
+### Chapter 19
+
+## Introduction
+In the previous chapters, we have discussed a variety of commands to deal with files and directories, manipulate data, work with processes, accessing remote servers etc.. Each command provides highly specialized solution that can be used together using the pipes or command grouping to create solutions to complex requirements. Scripting takes running multiple commands together one step further. 
+
+## Shell Scripts
+
+When we logon to a Linux server, the system will create a **shell session** that will enable us to interact with the system thru **commands**. This is called **interactive mode**; we enter a command as request and the system responds by performing an action and probably display some messages. Another way of interacting with the system is called **batch mode** where we group commands in a file called **script** and run it.
+
+![Shell Workflow](/images/p4-ch1_01_shell.png)
+
+The **Shell scripts** are programs that combines the capabilities of the commands and the programming language features such as such as variables, operators, expressions, loops, conditions and user-defined functions. We can create reusable scripts to automate manual tasks to save time and more important, minimize errors introduced due to manual work.
+
+> When we refer shell scripting, we mean **Bash Shell Scripts** specifically as `bash` is the default shell in the Linux and MacOS systems. 
+
+We can find the default shell for the currently logged in user from the environment variable `$SHELL`.
+
+```bash
+$ echo $SHELL
+/bin/bash
+``` 
+
+Linux comes with several shells in addition to bash. The list of supported shells are avaliable in the `/etc/shells` file. The default shell is configured in the `/etc/passwd` file that contains one record per user. The default shell can be updated by a superuser.  
+
+#### Sample Shell Script
+
+Let us start our scripting journey by writing the canonical **Hello World** display script
+
+Here are the steps to create the script
+
+1. create a directory to organize the scripts together
+2. open a file in your favorite editor and type the code given below
+3. save the file as **hello.sh** in the new directory we have created just now
+4. enable **execute** permission on the script
+5. run the script
+
+Here is the command sequence to perform the setup
+```bash
+$ mkdir -p code/bash/01_basics/bin
+$ cd code/bash/01_basics/bin
+
+$ vi hello.sh
+# add script given below and save
+
+$ chmod +x hello.sh
+```
+
+here is our first script.
+
+```bash {linenos=inline}
+#!/bin/bash
+
+# name: hello.sh
+# purpose: display 'Hello World'
+echo "Hello World"
+```
+
+Line 1 is a special comment that instructs the shell to use the `/bin/bash` command to run the script. It is called as the **shebang** line which starts with the hash **#** and bang **!** symbols followed by the command to be invoked in order to run the script. This is a common practice in the linux environment.
+
+running the script will produce the following output.
+
+```shell
+$ ./hello.sh
+Hello World
+```
+----
+
+Another example to accept and process user-input. Here we have used the `read` command to get the data entered by the user and stored it in the variable called `name`.
+
+```bash 
+#!/bin/bash
+
+# name: user_input.sh
+# purpose: a simple program that prompts user for input, 
+# accepts user-input, stores in a variable and displays on screen
+
+echo "Simple Interactive Script"
+
+read -p "What is your name? " name
+echo "Welcome $name"
+```
+
+running the script will produce the following output. The script displays the prompt **What is your name?** and waits for the user input. It captures everything the user typed until the **Enter/Return** key is pressed and store it in the variable called `name`. 
+
+```shell
+$ ./user_input.sh 
+Simple Interactive Script
+What is your name? Linus
+Welcome Linus
+```
+
+
+### Shell Special Characters
+
+|Character | Description|
+|----|----|
+| # | comment |
+| * | wildcard: represents zero or more characters |
+| ? | wildcard: represents zero or one character |
+|[...] | wildcard: represents characterset |
+| / | represents the **root** directory and the **path separator** |
+| ~ | represents current user's home directory |
+|{} | brace expansion |
+| ' | single qoute; also known as strong quote |
+| " | double qoute; also known as weak quote |
+|\` | backtick: treats everyting inside as command, executes and returns the result. This is old style, use `$(cmd)` instead| 
+| & | submit command in background mode | 
+| ; | run multiple commands with `;` as delimiter |
+|() | submit commands as a sub-process |
+|{} | wrap multiple commands together as a block of commands to facilitate output redirection |
+| < | redirection: input to command from a file |
+| > | redirection: output of command to a file |
+|\| | redirection: output of command to another command. we can chain multiple commands using the \| |
+| \ | escape special meaning of the special character and to code escape sequences like tab `\t`, newline `\n`, etc...|
+|\n | marks end of a command and shell start executing the command(s) |
+| space | delimiter of command, options and arguments in a command sequence |
+| \t | same as the space / blank character |
+| $ | prefix used in the variable names to get the values referenced by the variables |
+| ! | used as a prefix in shortcuts to retrive / reuse previously run commmands and to negate the return code of a command that follows the ! |
+ 

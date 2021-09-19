@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting Started on My New Hugo Site</title>
+    <link>http://example.org/part-1/</link>
+    <description>Recent content in Getting Started on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://example.org/part-1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.1: Introduction</title>
+      <link>http://example.org/part-1/p1-ch1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/part-1/p1-ch1/</guid>
+      <description>Chapter 1 Warning This topic is still in progress Please check later&amp;hellip;
+ Introduction The world is full of computing devices. We interact with these devices using the mouse, keyboard and more predominantly using touchscreens and voice assistants. Though these type of interactions are user-friendly and intuitive, these options do have limitations and often proved to be slow and error-prone to perform repetitive tasks. There is another way, a much better way to interact with the systems; by using the keyboard to type commands and get the work done.</description>
+    </item>
+    
+    <item>
+      <title>1.2: Command Syntax</title>
+      <link>http://example.org/part-1/p1-ch2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/part-1/p1-ch2/</guid>
+      <description>Chapter 2 Overview Commands are the backbone of the Linux operating system. There are thousands of commands in different categories and remembering all the commands in impossible. What we really need is to understand the syntax of the command well and the components that make up a command string.In this chapter, we will look into the command syntax, the components that make up various commands that we use on a daily basis.</description>
+    </item>
+    
+    <item>
+      <title>1.3: File System: Basics</title>
+      <link>http://example.org/part-1/p1-ch3a/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/part-1/p1-ch3a/</guid>
+      <description>Chapter 3 Warning This topic is still in progress Please check later&amp;hellip;
+ Introduction File System is one of the core components of any operating system. It provides a well-defined structure to store, organize and retrieve content and the metadata associated with the file such as owner, permissions, size, timestamps etc.. Each operating system has its own File System definition, for example Windows uses NTFS and Mac uses APFS. Both Windows and Mac supports old FAT32 file system.</description>
+    </item>
+    
+    <item>
+      <title>1.4: File System: Wildcards</title>
+      <link>http://example.org/part-1/p1-ch3b/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/part-1/p1-ch3b/</guid>
+      <description>Chapter 4 Warning This topic is still in progress Please check later&amp;hellip;
+ Introduction In the previous chapter, File System: Basics, we have discussed the importance of file system and its use in storing, retrieving files and the metadata. We have also discussed about absolute and relative paths, the way to access files stored in the system and the first set of commands to create files, directories and links (shortcuts) and commands to list files and directories and get information about different type of files.</description>
+    </item>
+    
+    <item>
+      <title>1.5: Permission</title>
+      <link>http://example.org/part-1/p1-ch4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/part-1/p1-ch4/</guid>
+      <description>Chapter 5 Introduction Linux is a multi-user operating system. In order to access a system, we need credentials, user id and a key or token. I did not use the term &amp;ldquo;password&amp;quot;; though it is the predominant way of gaining access, it is not the only way. Once we login to the system, we typically create and view files and directories. Since multiple users can login at the same time, Linux provides mechanism to avoid conflicts in creation and usage of files.</description>
+    </item>
+    
+    <item>
+      <title>1.6: IO Redirection</title>
+      <link>http://example.org/part-1/p1-ch5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/part-1/p1-ch5/</guid>
+      <description>Chapter 6 Introduction So far, we ran commands that displayed text on screen, be it errors or intended output. In cases like the cp -i command, the system expects user input to continue the execution. The system uses the keyboard as Standard Input and the monitor as Standard Output and Standard Error.
+Let us look into one of the most powerful features of Unix called IO Redirection. It enables us to use files instead of the keyboard and monitor as standard input and output.</description>
+    </item>
+    
+    <item>
+      <title>1.7: Viewing Files</title>
+      <link>http://example.org/part-1/p1-ch6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/part-1/p1-ch6/</guid>
+      <description>Introduction We know how to create directories and files, empty files at least !! using the mkdir and the touch commands respectively. In this chapter let us look into the ways to view files. Though viewing files seem like a simple task, as in double-clicking a file in Windows, Linux provides several commands to view the files.
+Since we have not discussed about way to create our own files, we will use common text files available in the system, the files in /etc directory such as /etc/shells or /etc/passwd.</description>
+    </item>
+    
+    <item>
+      <title>1.8: Data Manipulation</title>
+      <link>http://example.org/part-1/p1-ch7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/part-1/p1-ch7/</guid>
+      <description>Introduction In this chapter, let us discuss ways to manipulate the data from files; operations such as sort, slice, join, reformat, aggregation. etc.. I have originally named this chapter as File Manipulation Commands, however none of the commands discussed here actually change the input file, these commands just manipulate the contents and display the output in stdout that can be redirected into a file.
+This subset of commands are one of the most frequently used commands and gaining expertise using these commands will be really beneficial to developers, testers and anyone who work with files.</description>
+    </item>
+    
+    <item>
+      <title>1.9: Running Commands</title>
+      <link>http://example.org/part-1/p1-ch8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/part-1/p1-ch8/</guid>
+      <description>Chapter 9 Introduction So far, we ran commands one after another in order to accomplish some tasks. We split our task into sub-tasks in such a way that each sub-task could be solved by one command. The commands usually run fast with small input size. However we need to be active to type one command after other and our presence in front of the machine is needed.
+When we start using commands to process large files, one command may run for a longer duration and we have to wait for the command to complete before running another command.</description>
+    </item>
+    
+  </channel>
+</rss>

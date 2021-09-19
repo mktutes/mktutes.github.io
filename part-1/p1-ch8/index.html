@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>1.9: Running Commands :: My New Hugo Site</title>
+
+    
+    <link href="/css/nucleus.css?1632053186" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1632053186" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1632053186" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1632053186" rel="stylesheet">
+    <link href="/css/auto-complete.css?1632053186" rel="stylesheet">
+    <link href="/css/theme.css?1632053186" rel="stylesheet">
+    <link href="/css/tabs.css?1632053186" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1632053186" rel="stylesheet">
+    
+    <link href="/css/theme-blue.css?1632053186" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1632053186"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/part-1/p1-ch8/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo"
+  style="
+    color: white;
+    font-family: 'Novacento Sans Wide', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -2px;
+  "
+  href="/">
+  <b style="font-size: 120%;">MK</b> &nbsp; <i class="fab fa-linux"></i> &nbsp; Linux  
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1632053186"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1632053186"></script>
+<script type="text/javascript">
+    
+    
+    var index_url="/index.json";
+    var root_url="/";
+    var baseUri=root_url.replace(/\/$/, '');
+</script>
+<script type="text/javascript" src="/js/search.js?1632053186"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-0/" title="Setting the Stage" class="dd-item">
+        <a href="/part-0/">
+          <b>0. </b>
+Setting the Stage
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-0/p0-ch1/" title="Acknowledgement" class="dd-item">
+        <a href="/part-0/p0-ch1/">
+          
+Acknowledgement
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-1/" title="Getting Started" class="dd-item parent">
+        <a href="/part-1/">
+          <b>1. </b>
+Getting Started
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch1/" title="1.1: Introduction" class="dd-item">
+        <a href="/part-1/p1-ch1/">
+          
+1.1: Introduction
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch2/" title="1.2: Command Syntax" class="dd-item">
+        <a href="/part-1/p1-ch2/">
+          
+Command Syntax
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch3a/" title="1.3: File System: Basics" class="dd-item">
+        <a href="/part-1/p1-ch3a/">
+          
+1.3: File System: Basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch3b/" title="1.4: File System: Wildcards" class="dd-item">
+        <a href="/part-1/p1-ch3b/">
+          
+1.4: File System: Wildcards
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch4/" title="1.5: Permission" class="dd-item">
+        <a href="/part-1/p1-ch4/">
+          
+1.5: Permission
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch5/" title="1.6: IO Redirection" class="dd-item">
+        <a href="/part-1/p1-ch5/">
+          
+1.6: IO Redirection
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch6/" title="1.7: Viewing Files" class="dd-item">
+        <a href="/part-1/p1-ch6/">
+          
+1.7: Viewing Files
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch7/" title="1.8: Data Manipulation" class="dd-item">
+        <a href="/part-1/p1-ch7/">
+          
+1.8: Data Manipulation
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch8/" title="1.9: Running Commands" class="dd-item active">
+        <a href="/part-1/p1-ch8/">
+          
+1.9: Running Commands
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-2/" title="Text Processing" class="dd-item">
+        <a href="/part-2/">
+          <b>2. </b>
+Text Processing
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch1/" title="2.1: Regular Expressions" class="dd-item">
+        <a href="/part-2/p2-ch1/">
+          
+2.1: Regular Expressions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch2/" title="2.2: Vi Editor" class="dd-item">
+        <a href="/part-2/p2-ch2/">
+          
+2.2: Vi Editor
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch3/" title="2.3: Searching Text" class="dd-item">
+        <a href="/part-2/p2-ch3/">
+          
+2.3: Searching Text
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch4/" title="2.4: Text Substitution" class="dd-item">
+        <a href="/part-2/p2-ch4/">
+          
+2.4: Text Substitution
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch5/" title="2.4: AWK programming Language" class="dd-item">
+        <a href="/part-2/p2-ch5/">
+          
+2.4: AWK programming Language
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-3/" title="Beyond the Basics" class="dd-item">
+        <a href="/part-3/">
+          <b>3. </b>
+Beyond the Basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch1/" title="3.1: Process Management" class="dd-item">
+        <a href="/part-3/p3-ch1/">
+          
+3.1: Process Management
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch2/" title="3.2: Scheduling Jobs" class="dd-item">
+        <a href="/part-3/p3-ch2/">
+          
+3.2: Scheduling Jobs
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch4/" title="3.3: Remote Access Commands" class="dd-item">
+        <a href="/part-3/p3-ch4/">
+          
+3.3: Remote Access Commands
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch3/" title="3.4: Archival commands" class="dd-item">
+        <a href="/part-3/p3-ch3/">
+          
+3.4: Archival commands
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch5/" title="3.5: The &#34;find&#34; Command" class="dd-item">
+        <a href="/part-3/p3-ch5/">
+          
+3.5: The &#34;find&#34; Command
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch6/" title="3.6: The &#34;xargs&#34; Command" class="dd-item">
+        <a href="/part-3/p3-ch6/">
+          
+3.6: The &#34;xargs&#34; Command
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-4/" title="Shell Scripting" class="dd-item">
+        <a href="/part-4/">
+          <b>4. </b>
+Shell Scripting
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-4/p4-ch1/" title="4.1: Introduction to Shell Scripts" class="dd-item">
+        <a href="/part-4/p4-ch1/">
+          
+4.1: Introduction to Shell Scripts
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-5/" title="Appendix" class="dd-item">
+        <a href="/part-5/">
+          <b>9. </b>
+Appendix
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-5/p5-ch1/" title="Commands Summary" class="dd-item">
+        <a href="/part-5/p5-ch1/">
+          
+Commands Summary
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-5/p5-ch2/" title="Special Characters" class="dd-item">
+        <a href="/part-5/p5-ch2/">
+          
+Special Characters
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+            <li>
+                <a class="padding" href="http://example.org/tags"><i class='fas fa-tags'></i> Tags</a>
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Linux Basics</a> > <a href='/part-1/'>Getting Started</a> > 1.9: Running Commands
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#chapter-9">Chapter 9</a></li>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#running-multiple-commands-using-">Running multiple commands using <code>|</code></a></li>
+        <li><a href="#other-ways-to-run-multiple-commands">Other ways to run multiple commands</a></li>
+        <li><a href="#running-multiple-commands-so-far">Running Multiple Commands: so far&hellip;</a></li>
+      </ul>
+    </li>
+    <li><a href="#running-commands-together">Running Commands Together</a>
+      <ul>
+        <li><a href="#using-the-semicolon--operator">Using the semicolon <code>;</code> operator</a></li>
+        <li><a href="#command-grouping--and--operator">Command Grouping: <code>{}</code> and <code>;</code> operator</a></li>
+        <li><a href="#command-grouping--and--operator-1">Command Grouping: <code>()</code> and <code>;</code> operator</a></li>
+        <li><a href="#conditional-execution-using--and-">Conditional Execution using <code>&amp;&amp;</code> and <code>||</code></a></li>
+        <li><a href="#capturing-command-output-in-a-shell-variable">Capturing Command Output in a Shell Variable</a></li>
+        <li><a href="#passing-command-output-as-argument-using-sub-shell">Passing Command Output as Argument using Sub-Shell</a></li>
+        <li><a href="#running-commands-repeatedly-using-a-for-loop">Running Commands Repeatedly using a <code>for</code> loop</a></li>
+        <li><a href="#run-old-commands-from-history">Run old commands from <code>history</code></a></li>
+        <li><a href="#run-previous-commands-and-optionally-replace-args">Run previous commands and optionally replace args</a></li>
+      </ul>
+    </li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              1.9: Running Commands
+            </h1>
+          
+
+        
+
+
+<h3 id="chapter-9">Chapter 9</h3>
+<h3 id="introduction">Introduction</h3>
+<p>So far, we ran commands one after another in order to accomplish some tasks. We split our task into sub-tasks in such a way that each sub-task could be solved by one command. The commands usually run fast with small input size. However we need to be active to type one command after other and our presence in front of the machine is needed.</p>
+<p>When we start using commands to process large files, one command may run for a longer duration and we have to wait for the command to complete before running another command. This can be frustrating. Fortunately, Linux provides us several options to submit commands together and let Linux takes care of executing the commands in the order it was entered.</p>
+<h3 id="running-multiple-commands-using-">Running multiple commands using <code>|</code></h3>
+<p>In the previous chapters, we have learnt how to use the <strong>redirection using the pipe operator</strong> to run <strong>related commands</strong> by passing the output of one command as input to the next command. This works only for commands that are related and one command depends on the previous command for input and we are interested in the output of the last command alone.</p>
+<h3 id="other-ways-to-run-multiple-commands">Other ways to run multiple commands</h3>
+<p>Here are some of the ways we can submit multiple unrelated command sequentially and let Linux takes care of executing it one-by-one.</p>
+<ol>
+<li>commands separated by semi-colon <code>cmd1; cmd2; cmd3</code></li>
+<li>commands separated by semi-colon and enclosed within curly braces <code>{ cmd1; cmd2; cmd3; }</code></li>
+<li>commands separated by semi-colon and enclosed within parenthesis <code>( cmd1; cmd2; cmd3; )</code></li>
+<li>Conditional executing using <code>&amp;&amp;</code> and <code>||</code> - <code>cmd1 &amp;&amp; cmd2</code>, <code>cmd1 || cmd2</code> or <code>cmd1 &amp;&amp; cmd2 || cmd3</code></li>
+<li>Capturing command&rsquo;s output in a variable using the <code>backticks</code> - <code>`cmd`</code>  or <code>VAR=$( cmd1 | cmd2 )</code> syntax</li>
+<li>Passing command&rsquo;s output as an argument <code>cmd1 &lt;(cmd2) &lt;(cmd3)</code></li>
+<li>Run one or more commands several times using a <code>for</code> loop from the command line.</li>
+<li>Run previously executed commands with or without changes using shortcuts associated with the <code>history</code> command</li>
+<li>Run previous command by replacing arguments using <code>fc -s &quot;OLD=NEW&quot;</code> command</li>
+</ol>
+<h3 id="running-multiple-commands-so-far">Running Multiple Commands: so far&hellip;</h3>
+<p>Here are two examples; one uses the pipe to run related commands in one go. The second example is to run series of unrelated commands one after another manually.</p>
+<p><strong>Example 1: Extract name and scores and transform the data</strong></p>
+<p>We have a student delimited file that contains test scores. We need to extract the student id, last and first names, grade and score; convert the names to uppercase and sort the data by grade, score and last and first names where grade and names will be sorted ascending and the score in descending order.</p>
+<h4 id="sample-file">Sample file</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat student_file.txt 
+S0001,Smith,John,10-JAN-2004,04,372,Z
+S0002,Smith,Jane,21-FEB-2004,04,385,Z
+S0003,Smith,John,14-OCT-2003,04,425,Z
+S0004,Smyth,Dan,25-DEC-2002,05,499,Z
+S0004,Lowes,Ben,12-MAY-2001,05,499,Z
+S0005,Cook,Lisa,28-SEP-2011,05,83,Z
+S0006,Daugherty,Joshua,05-APR-2011,05,94,Z
+S0007,Macias,Emma,21-SEP-2009,07,79,Z
+</code></pre></div><h4 id="formatted-output-using-">Formatted output using <code>|</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cut -d, -f1,2,3,5,6 student_file.txt | tr <span style="color:#f1fa8c">&#39;a-z&#39;</span> <span style="color:#f1fa8c">&#39;A-Z&#39;</span> | sort -t, -k4,4 -k5,5nr -k2,2 -k3,3
+S0003,SMITH,JOHN,04,425
+S0002,SMITH,JANE,04,385
+S0001,SMITH,JOHN,04,372
+S0004,LOWES,BEN,05,499
+S0004,SMYTH,DAN,05,499
+S0005,COOK,LISA,05,83
+S0006,DAUGHERTY,JOSHUA,05,94
+S0007,MACIAS,EMMA,07,79
+</code></pre></div><p><strong>Example 2: display dates before and after <code>sleep N</code></strong></p>
+<p>Let us say, we want to verify the time taken by <code>sleep N</code> command is closer to <code>N</code> seconds. We can run the <code>date</code> command before and after <code>sleep</code> and check. However, we need to type the commands quickly and execute to get an accurate result.</p>
+<p>I took 3 extra seconds to run the <code>sleep</code> and the second <code>date</code> command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ date
+Tue Aug <span style="color:#bd93f9">17</span> 14:32:15 IST <span style="color:#bd93f9">2021</span>
+
+$ sleep <span style="color:#bd93f9">5</span>
+
+$ date
+Tue Aug <span style="color:#bd93f9">17</span> 14:32:23 IST <span style="color:#bd93f9">2021</span>
+</code></pre></div><h2 id="running-commands-together">Running Commands Together</h2>
+<p>The pipe operator works well to run related commands. In this section let us look at other ways to run multiple commands; dependent on each other or just a set of commands to run one after another automatically.</p>
+<h3 id="using-the-semicolon--operator">Using the semicolon <code>;</code> operator</h3>
+<p>The semicolon <code>;</code> operator acts like an implicit newline as if the <code>Enter</code> key is pressed. We can type a series of commands separated by semicolon and when we press the <code>Enter</code> key, the commands will execute in the order in which they appear in the command-line.</p>
+<p>Let us rewrite the <code>sleep</code> and <code>date</code> command sequence from the previous section using the <code>;</code> operator.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># run commands one after another</span>
+$ date
+Tue Aug <span style="color:#bd93f9">17</span> 15:48:48 IST <span style="color:#bd93f9">2021</span>
+$ sleep <span style="color:#bd93f9">5</span>
+$ date
+Tue Aug <span style="color:#bd93f9">17</span> 15:48:55 IST <span style="color:#bd93f9">2021</span>
+
+<span style="color:#6272a4"># run commands in sequence using &#39;;&#39;</span>
+$ date; sleep 5; date
+Tue Aug <span style="color:#bd93f9">17</span> 15:49:52 IST <span style="color:#bd93f9">2021</span>
+Tue Aug <span style="color:#bd93f9">17</span> 15:49:58 IST <span style="color:#bd93f9">2021</span>
+</code></pre></div><h3 id="command-grouping--and--operator">Command Grouping: <code>{}</code> and <code>;</code> operator</h3>
+<p>Running commands sequentially using <code>;</code> operator serves us well if we just need to run these commands. In case we need to capture the output in a file using redirection and if we use IO redirection at the end then only the last command&rsquo;s output will be captured. For example, in the below example, the output of first <code>date</code> command is displayed on the screen and the last command&rsquo;s output is redirected.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ date; sleep 5; date &gt; date.txt
+Tue Aug <span style="color:#bd93f9">17</span> 15:52:41 IST <span style="color:#bd93f9">2021</span>
+$ cat date.txt 
+Tue Aug <span style="color:#bd93f9">17</span> 15:52:46 IST <span style="color:#bd93f9">2021</span>
+</code></pre></div><p>We can use group the commands by enclosing the command sequence inside the <code>{}</code> operator. This will ensure that all the commands enclosed within the braces are treated as a single entity and redirecting using the  <code>{} &gt; FILE</code> syntax will redirect the output from all the commands into the <code>FILE</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#ff79c6">{</span> date; sleep 5; date; <span style="color:#ff79c6">}</span> &gt; date.txt
+
+$ cat date.txt 
+Tue Aug <span style="color:#bd93f9">17</span> 15:55:40 IST <span style="color:#bd93f9">2021</span>
+Tue Aug <span style="color:#bd93f9">17</span> 15:55:45 IST <span style="color:#bd93f9">2021</span>
+</code></pre></div><h4 id="another-example">Another Example</h4>
+<p>Let us add header to the <code>student_file.txt</code> we have used earlier.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat student_file.txt 
+S0001,Smith,John,10-JAN-2004,04,372,Z
+S0002,Smith,Jane,21-FEB-2004,04,385,Z
+
+$ <span style="color:#ff79c6">{</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;StudentId,LastName,FirstName,DateOfBirth,Grade,Score,End&#34;</span>;  cat student_file.txt; <span style="color:#ff79c6">}</span> &gt; student_file_with_header.txt 
+
+$ cat student_file_with_header.txt
+StudentId,LastName,FirstName,DateOfBirth,Grade,Score,End
+S0001,Smith,John,10-JAN-2004,04,372,Z
+S0002,Smith,Jane,21-FEB-2004,04,385,Z
+</code></pre></div><h4 id="points-to-remember">Points to Remember</h4>
+<ol>
+<li>Since the <code>{}</code> is an operator in <code>bash</code>, we need to leave a <code>blank</code> between the brace and the command</li>
+<li>Each command should be <strong>terminated with a semicolon including</strong> the last command.</li>
+<li>The commands will be executed within the same shell so all the environmental and user-defined variables will be available and can be manipulated within the <code>{}</code>. <strong>More on variables later&hellip;</strong></li>
+</ol>
+<h4 id="shell-variables-and-">Shell Variables and <code>{}</code></h4>
+<p>As mentioned above, the shell variables updated within the <code>{}</code> grouping will be visible even after all the commands within <code>{}</code> complete execution. If we want to have local scope of variable assignment, we can use the parenthesis <code>()</code> grouping instead.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#8be9fd;font-style:italic">x</span><span style="color:#ff79c6">=</span>10; <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;OUT: x is </span><span style="color:#8be9fd;font-style:italic">$x</span><span style="color:#f1fa8c">&#34;</span>; <span style="color:#ff79c6">{</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;IN : x is </span><span style="color:#8be9fd;font-style:italic">$x</span><span style="color:#f1fa8c">&#34;</span>;<span style="color:#8be9fd;font-style:italic">x</span><span style="color:#ff79c6">=</span>20; <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;IN : x now is </span><span style="color:#8be9fd;font-style:italic">$x</span><span style="color:#f1fa8c">&#34;</span>; <span style="color:#ff79c6">}</span>; <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;OUT: x is </span><span style="color:#8be9fd;font-style:italic">$x</span><span style="color:#f1fa8c">&#34;</span>  
+OUT: x is <span style="color:#bd93f9">10</span>
+IN : x is <span style="color:#bd93f9">10</span>
+IN : x now is <span style="color:#bd93f9">20</span>
+OUT: x is <span style="color:#bd93f9">20</span>
+</code></pre></div><h3 id="command-grouping--and--operator-1">Command Grouping: <code>()</code> and <code>;</code> operator</h3>
+<p>Grouping the commands using the <strong>parenthesis</strong> is similar to the <strong>braces</strong> in terms of redirection. Both grouping options treats the entire command list enclosed in between as single entity thus complete output is redirected into same output file.</p>
+<p>There are couple of differences between the way <code>{}</code> and <code>()</code> works. We saw that <code>{}</code> runs all the commands in the same shell. The <code>()</code> grouping runs the command list in a new shell environment called <strong>sub-shell</strong>. Since all the commands run inside a new shell, any variable created or assigned inside the <code>()</code> will not be available once the commands complete execution.</p>
+<p>The <code>()</code> does not need space-delimiter and the last command does not have to be terminated by the <code>;</code>. Here is the same example from previous section. There is no space between <code>()</code> and the commands and there is no <code>;</code> after the last command. However, adding spaces and <code>;</code> at the end of the last command adds readability</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#ff79c6">(</span>date;sleep 5; date<span style="color:#ff79c6">)</span> &gt; date.txt
+
+$ cat date.txt 
+Tue Aug <span style="color:#bd93f9">17</span> 16:09:23 IST <span style="color:#bd93f9">2021</span>
+Tue Aug <span style="color:#bd93f9">17</span> 16:09:28 IST <span style="color:#bd93f9">2021</span>
+
+<span style="color:#6272a4"># no issues adding spaces between &#39;()&#39; and commands</span>
+<span style="color:#6272a4"># or semicolon at the end</span>
+$ <span style="color:#ff79c6">(</span> date; sleep 5; date; <span style="color:#ff79c6">)</span> &gt; date.txt 
+
+$ cat date.txt 
+Tue Aug <span style="color:#bd93f9">17</span> 16:10:57 IST <span style="color:#bd93f9">2021</span>
+Tue Aug <span style="color:#bd93f9">17</span> 16:11:02 IST <span style="color:#bd93f9">2021</span>
+</code></pre></div><h4 id="shell-variables-and--1">Shell Variables and <code>()</code></h4>
+<p>Commands that runs within <code>()</code> use a separate shell (<strong>sub-shell</strong>) to run the commands. If any variable assignment or new variable declaration happens within the <code>()</code>, these changes will not be available once the sub-shell completes executing the commands. If we need to persist the changes, we need to use the braces <code>{}</code> grouping instead of parenthesis <code>()</code> grouping.</p>
+<blockquote>
+<p>more on variables later when we discuss <strong>shell scripting</strong></p>
+</blockquote>
+<p>In the below example, we have shell variable <code>x</code> set to <code>10</code> and displayed outside the <code>()</code>. The variable <code>x</code> is displayed again within <code>()</code> before and after updating the variable. Once the sub-shell completes execution, the value of <code>x</code> is lost and original value will be displayed.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#8be9fd;font-style:italic">x</span><span style="color:#ff79c6">=</span>10; <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;OUT: x is </span><span style="color:#8be9fd;font-style:italic">$x</span><span style="color:#f1fa8c">&#34;</span>; <span style="color:#ff79c6">(</span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;IN : x is </span><span style="color:#8be9fd;font-style:italic">$x</span><span style="color:#f1fa8c">&#34;</span>;<span style="color:#8be9fd;font-style:italic">x</span><span style="color:#ff79c6">=</span>20; <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;IN : x now is </span><span style="color:#8be9fd;font-style:italic">$x</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">)</span>; <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;OUT: x is </span><span style="color:#8be9fd;font-style:italic">$x</span><span style="color:#f1fa8c">&#34;</span>  
+OUT: x is <span style="color:#bd93f9">10</span>
+IN : x is <span style="color:#bd93f9">10</span>
+IN : x now is <span style="color:#bd93f9">20</span>
+OUT: x is <span style="color:#bd93f9">10</span>
+</code></pre></div><h3 id="conditional-execution-using--and-">Conditional Execution using <code>&amp;&amp;</code> and <code>||</code></h3>
+<p>Sometimes, we may need to run a command based on the outcome of the previous command. This is known as conditional execution which is different from the sequential execution examples we have seen so far using <code>;</code>, <code>{}</code> and <code>()</code>.</p>
+<p>We can use the <code>&amp;&amp;</code> - <strong>AND</strong> operator to run the second command ONLY if the first command is successful. That is the first command returns a <strong>return code 0</strong> (<code>echo $?</code>). The <code>||</code> - <strong>OR</strong> command, on the contrary executes the second command ONLY if the first command is unsuccessful (<strong>RC &gt; 0</strong>). We can use the combination of <code>&amp;&amp;</code> and <code>||</code> to construct a longer command sequence that can be run conditionally.</p>
+<p>Lots of time, we create a directory and then change to it immediately after. Instead of running the two commands separately, we can combine the <code>mkdir</code> and <code>cd</code> with <code>&amp;&amp;</code> operator so that if <code>mkdir</code> is successful then run the <code>cd</code> next. For demo, I have added the <code>echo</code> command that will run ONLY if the <code>cd</code> is successful.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir temp <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#8be9fd;font-style:italic">cd</span> temp <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;created and changed to &#39;temp&#39; directory&#34;</span>
+created and changed to <span style="color:#f1fa8c">&#39;temp&#39;</span> directory
+</code></pre></div><p>Sometimes we may want to customize the error message provided on commands. We cause use the <code>||</code> operator to display a custom error message if a command fails. This solution works well on commands that also provide an option to suppress the error message using option. The <code>cmp</code> command to compare files is one such example. It displays nothing when both files match, the command does not display anything and a message if the files are different. The return code is set to 1 if the files are different. We can suppress the default error message using the <code>-s</code> option.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;A&#34;</span> &gt; file_1.txt
+$ <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;a&#34;</span> &gt; file_2.txt
+
+$ cmp file_1.txt file_2.txt
+file_1.txt file_2.txt differ: char 1, line <span style="color:#bd93f9">1</span>
+$ <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#8be9fd;font-style:italic">$?</span>
+<span style="color:#bd93f9">1</span>
+
+$ cmp -s file_1.txt file_2.txt <span style="color:#ff79c6">||</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Both files differ, removing files...&#34;</span> <span style="color:#ff79c6">&amp;&amp;</span> rm -v file_<span style="color:#ff79c6">[</span>12<span style="color:#ff79c6">]</span>.txt
+Both files differ, removing files...
+file_1.txt
+file_2.txt
+</code></pre></div><h3 id="capturing-command-output-in-a-shell-variable">Capturing Command Output in a Shell Variable</h3>
+<p>Sometimes, we may neither want the output of a command to be displayed nor redirected to a file. We just need to capture the output in a <strong>shell variable</strong> and display it later using the <code>echo</code> or <code>printf</code> command.</p>
+<p>There are two ways to capture the output of command(s) in a variable; using the <strong>backticks</strong> (<code>`</code>) which is the old way and using the <code>$( cmd )</code> syntax which is the preferred way.</p>
+<blockquote>
+<p>The backtick that looks like single-quote can be found under the <strong>ESC</strong> key. The <code>~</code> and  backtick shares the same key.</p>
+</blockquote>
+<p>In the previous section, we have concatenated the header of a CSV file using <code>echo</code> and <code>cat</code> commands and the <code>{ cmd; cmd; } &gt; FILE</code> syntax. Let us add the record count at the end of the file like the output of RDBMS table export as CSV.</p>
+<p>We can capture the record count of <code>wc -l</code> in a variable and later use it in a <code>echo</code> command to construct a string and display the count.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wc -l student_file.txt
+<span style="color:#bd93f9">2</span> student_file.txt
+
+$ wc -l student_file.txt | cut -d<span style="color:#f1fa8c">&#39; &#39;</span> -f1
+<span style="color:#bd93f9">2</span>
+
+$ <span style="color:#8be9fd;font-style:italic">echo</span> student_file.txt
+student_file.txt
+
+<span style="color:#6272a4"># capture file name in variable called &#39;file&#39;</span>
+$ <span style="color:#8be9fd;font-style:italic">file</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span><span style="color:#8be9fd;font-style:italic">echo</span> student_file.txt<span style="color:#ff79c6">)</span>
+
+$ <span style="color:#8be9fd;font-style:italic">count</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span>wc -l student_file.txt | cut -d<span style="color:#f1fa8c">&#39; &#39;</span> -f1<span style="color:#ff79c6">)</span>
+
+<span style="color:#6272a4"># construct the string using variable and literals</span>
+$ <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$file</span><span style="color:#f1fa8c"> has </span><span style="color:#8be9fd;font-style:italic">$count</span><span style="color:#f1fa8c"> record(s)&#34;</span>
+student_file.txt has <span style="color:#bd93f9">2</span> record<span style="color:#ff79c6">(</span>s<span style="color:#ff79c6">)</span>
+</code></pre></div><p>We can use <code>`</code> instead of the <code>$( )</code> syntax too. Using backticks was the old way of capturing command output. The <code>$( )</code> syntax is preferred since many may confuse backtick with single-quotes.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#8be9fd;font-style:italic">file</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">`</span><span style="color:#8be9fd;font-style:italic">echo</span> student_file.txt<span style="color:#f1fa8c">`</span>
+$ <span style="color:#8be9fd;font-style:italic">count</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">`</span>wc -l student_file.txt | cut -d<span style="color:#f1fa8c">&#39; &#39;</span> -f1<span style="color:#f1fa8c">`</span>
+
+$ <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$file</span><span style="color:#f1fa8c"> has </span><span style="color:#8be9fd;font-style:italic">$count</span><span style="color:#f1fa8c"> record(s)&#34;</span>
+student_file.txt has <span style="color:#bd93f9">2</span> record<span style="color:#ff79c6">(</span>s<span style="color:#ff79c6">)</span>
+</code></pre></div><p>Let us put the above together to add a footer to a delimited file</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># set variables: header and file name</span>
+$ <span style="color:#8be9fd;font-style:italic">hdr</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;StudentId,LastName,FirstName,DateOfBirth,Grade,Score,End&#34;</span>
+$ <span style="color:#8be9fd;font-style:italic">file</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;student_file.txt&#34;</span>
+
+<span style="color:#6272a4"># use var=$(cmd) and { cmd; cmd; }</span>
+$ <span style="color:#ff79c6">{</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#8be9fd;font-style:italic">$hdr</span>; cat <span style="color:#8be9fd;font-style:italic">$file</span>; <span style="color:#8be9fd;font-style:italic">count</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span>wc -l <span style="color:#8be9fd;font-style:italic">$file</span> | cut -d<span style="color:#f1fa8c">&#39; &#39;</span> -f1<span style="color:#ff79c6">)</span>; <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>&gt; <span style="color:#8be9fd;font-style:italic">echo</span> -e <span style="color:#f1fa8c">&#34;\n</span><span style="color:#8be9fd;font-style:italic">$file</span><span style="color:#f1fa8c"> has </span><span style="color:#8be9fd;font-style:italic">$count</span><span style="color:#f1fa8c"> record(s)\n&#34;</span>; <span style="color:#ff79c6">}</span> &gt; student_file_with_header.txt
+
+<span style="color:#6272a4"># display output</span>
+$ cat student_file_with_header.txt
+StudentId,LastName,FirstName,DateOfBirth,Grade,Score,End
+S0001,Smith,John,10-JAN-2004,04,372,Z
+S0002,Smith,Jane,21-FEB-2004,04,385,Z
+S0003,Smith,John,14-OCT-2003,04,425,Z
+S0004,Lowes,Ben,12-MAY-2001,05,499,Z
+S0005,Cook,Lisa,28-SEP-2011,05,83,Z
+
+student_file.txt has <span style="color:#bd93f9">5</span> record<span style="color:#ff79c6">(</span>s<span style="color:#ff79c6">)</span>
+</code></pre></div><h3 id="passing-command-output-as-argument-using-sub-shell">Passing Command Output as Argument using Sub-Shell</h3>
+<p>Sometimes, we might want to pass part of a file or files as argument to another command or pass the output of multiple commands as argument to another command. We have two options to handle situations like this</p>
+<ol>
+<li>Run the commands one-by-one and create temporary files first and pass the files to the command in question</li>
+<li>Run each command using the <code>&lt;( cmds )</code> syntax and code one or more <code>&lt;()</code> as argument to the command in question</li>
+</ol>
+<p>The first option is kind of self-explanatory. Let us say, we want to compare the last names from two CSV files where the last name is the second field. We can do the following</p>
+<ol>
+<li><code>cut -d',' -f2 FILE1 | sort &gt; LNAME1.txt</code></li>
+<li><code>cut -d',' -f2 FILE2 | sort &gt; LNAME2.txt</code></li>
+<li><code>comm LNAME1.txt LNAME2.txt &gt; DIFF.TXT</code></li>
+<li><code>rm -v LNAME*</code></li>
+</ol>
+<p>The above solution works fine. It just we need to perform 3 or 4 steps to get the required output.</p>
+<p>The second option accomplishes the same result in just one step.</p>
+<pre><code>$ comm &lt;(cut -d',' -f2 FILE1 | sort &gt; LNAME1.txt) &lt;(cut -d',' -f2 FILE2 | sort &gt; LNAME2.txt) &gt; DIFF.TXT
+</code></pre><p>The <code>&lt;()</code> syntax has two components that we are already familiar of. <code>&lt;</code> - <strong>input redirection</strong> and <code>()</code> - <strong>running multiple commands together</strong>. Since <code>()</code> runs as separate process, the output is passed in a temporary file to the command in question. The temp files will be deleted automatically once the process is done.</p>
+<h4 id="example-option-1">Example: Option 1</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cut -d, -f2 sample_01.txt | sort &gt; temp_01.txt
+
+$ cut -d, -f2 sample_02.txt | sort &gt; temp_02.txt
+
+$ head temp_0*
+<span style="color:#ff79c6">==</span>&gt; temp_01.txt &lt;<span style="color:#ff79c6">==</span>
+Daugherty
+Gomez
+Gordon
+Huang
+<span style="color:#8be9fd;font-style:italic">Sherman</span>
+
+<span style="color:#ff79c6">==</span>&gt; temp_02.txt &lt;<span style="color:#ff79c6">==</span>
+Gomez
+Gordon
+Huang
+Moore
+Sherman
+
+<span style="color:#6272a4"># 4 unique names in each file and 1 common names</span>
+$ comm temp_01.txt temp_02.txt
+Daugherty
+                Gomez
+                Gordon
+                Huang
+        Moore
+                Sherman
+$ rm temp_0<span style="color:#ff79c6">[</span>12<span style="color:#ff79c6">]</span>.txt
+</code></pre></div><h4 id="example-option-2">Example: Option 2</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ comm  &lt;<span style="color:#ff79c6">(</span>cut -d, -f2 sample_01.txt | sort<span style="color:#ff79c6">)</span> &lt;<span style="color:#ff79c6">(</span>cut -d, -f2 sample_02.txt | sort<span style="color:#ff79c6">)</span>
+Daugherty
+                Gomez
+                Gordon
+                Huang
+        Moore
+                Sherman
+</code></pre></div><h3 id="running-commands-repeatedly-using-a-for-loop">Running Commands Repeatedly using a <code>for</code> loop</h3>
+<p>Though we will discuss <strong>loops</strong> in detail as part of <strong>shell scripting</strong>, let us quickly look at the <code>for</code> loop syntax that can be used in the command line to run one or more commands multiple time.</p>
+<p><strong>syntax of <code>for</code> loop</strong></p>
+<blockquote>
+<p>The <code>for</code> loops thru a set of items with each iteration assigns one element from the set of items
+The items can be a space-separated sentence, command&rsquo;s output or brace expansion&rsquo;s output <code>{1..10}</code></p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ff79c6">for</span> VAR in ITEMS; 
+<span style="color:#ff79c6">do</span>
+  cmd1;
+  cmd2;
+<span style="color:#ff79c6">done</span>
+
+<span style="color:#ff79c6">for</span> VAR in ITEMS; <span style="color:#ff79c6">do</span> cmd1; cmd2; <span style="color:#ff79c6">done</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#ff79c6">for</span> i in <span style="color:#ff79c6">{</span>3..1<span style="color:#ff79c6">}</span>; <span style="color:#ff79c6">do</span> <span style="color:#8be9fd;font-style:italic">echo</span> Countdown <span style="color:#8be9fd;font-style:italic">$i</span>...; <span style="color:#ff79c6">done</span> ; <span style="color:#8be9fd;font-style:italic">echo</span> Liftoff
+Countdown 3...
+Countdown 2...
+Countdown 1...
+Liftoff
+</code></pre></div><p>We have a set of files with <code>sample_</code> prefix. Let us run <code>wc -l</code> command for each file using the <code>for</code> loop and print <code>FILE has COUNT record(s)</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#ff79c6">for</span> FILE in sample_*; <span style="color:#ff79c6">do</span> <span style="color:#8be9fd;font-style:italic">count</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span> wc -l <span style="color:#8be9fd;font-style:italic">$FILE</span> | cut -d<span style="color:#f1fa8c">&#39; &#39;</span> -f1 <span style="color:#ff79c6">)</span>; <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$FILE</span><span style="color:#f1fa8c"> has </span><span style="color:#8be9fd;font-style:italic">$count</span><span style="color:#f1fa8c"> record(s)&#34;</span>; <span style="color:#ff79c6">done</span>
+
+sample_01.txt has <span style="color:#bd93f9">6</span> record<span style="color:#ff79c6">(</span>s<span style="color:#ff79c6">)</span>
+sample_02.txt has <span style="color:#bd93f9">6</span> record<span style="color:#ff79c6">(</span>s<span style="color:#ff79c6">)</span>
+sample_03.txt has <span style="color:#bd93f9">2</span> record<span style="color:#ff79c6">(</span>s<span style="color:#ff79c6">)</span>
+sample_04.txt has <span style="color:#bd93f9">4</span> record<span style="color:#ff79c6">(</span>s<span style="color:#ff79c6">)</span>
+sample_05.txt has <span style="color:#bd93f9">6</span> record<span style="color:#ff79c6">(</span>s<span style="color:#ff79c6">)</span>
+
+<span style="color:#6272a4"># verify</span>
+$ wc -l sample_0<span style="color:#ff79c6">[</span>1-5<span style="color:#ff79c6">]</span>.txt
+  <span style="color:#bd93f9">6</span> sample_01.txt
+  <span style="color:#bd93f9">6</span> sample_02.txt
+  <span style="color:#bd93f9">2</span> sample_03.txt
+  <span style="color:#bd93f9">4</span> sample_04.txt
+  <span style="color:#bd93f9">6</span> sample_05.txt
+</code></pre></div><h3 id="run-old-commands-from-history">Run old commands from <code>history</code></h3>
+<p>The <code>history</code> command displays previously executed commands. This is helpful for novice learners as a reference. Linux keeps the last <strong>500</strong> commands in a hidden file <code>~/.bash_history</code> in the <strong>home directory</strong> and the <code>history</code> command uses this file to display the commands with serial number in front of it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#8be9fd;font-style:italic">history</span> | head -5
+   <span style="color:#bd93f9">80</span>  wc -l large_file.txt
+   <span style="color:#bd93f9">81</span>  ls -lh large_file.txt
+   <span style="color:#bd93f9">82</span>  clear
+   <span style="color:#bd93f9">83</span>  ls
+   <span style="color:#bd93f9">84</span>  <span style="color:#8be9fd;font-style:italic">jobs</span>
+</code></pre></div><p>There is another use of the <code>history</code> command. We can run one of the old commands using some shortcuts.</p>
+<blockquote>
+<p>These are few of the simple shortcuts we can use to execute or retrieve past commands from the <code>history</code>. For more information, look for articles / documentations related to the history command</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>!!</code></td>
+<td>run previous command again</td>
+</tr>
+<tr>
+<td><code>!N</code></td>
+<td>run command with serial number <code>N</code></td>
+</tr>
+<tr>
+<td><code>!-N</code></td>
+<td>run the <code>Nth</code> command from the end</td>
+</tr>
+<tr>
+<td><code>!!:p</code></td>
+<td>just print the previous command without executing it.</td>
+</tr>
+<tr>
+<td></td>
+<td>we can use <strong>up arrow</strong> and make some modification and run</td>
+</tr>
+<tr>
+<td><code>!N:p</code></td>
+<td>print command N</td>
+</tr>
+<tr>
+<td><code>!-N:p</code></td>
+<td>print command N counting backward</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ date
+Thu <span style="color:#bd93f9">26</span> Aug <span style="color:#bd93f9">2021</span> 02:13:48 PM UTC
+
+<span style="color:#6272a4"># runs previous: date command again</span>
+$ !!
+date
+Thu <span style="color:#bd93f9">26</span> Aug <span style="color:#bd93f9">2021</span> 02:13:52 PM UTC
+
+$ !!:p
+date
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#8be9fd;font-style:italic">history</span> | tree -5
+  <span style="color:#bd93f9">524</span>  <span style="color:#8be9fd;font-style:italic">history</span>
+  <span style="color:#bd93f9">525</span>  vi ~/.bash_profile
+  <span style="color:#bd93f9">526</span>  cat ~/.bash_profile
+  <span style="color:#bd93f9">527</span>  wc -l ~/.bash_profile
+  <span style="color:#bd93f9">528</span>  <span style="color:#8be9fd;font-style:italic">history</span>
+  
+$ !527:p
+wc -l ~/.bash_profile
+
+<span style="color:#6272a4"># press up arrow and change the last printed command</span>
+$ wc -l ~/.bash_history
+<span style="color:#bd93f9">500</span> /home/mktutes/.bash_history
+
+$ <span style="color:#8be9fd;font-style:italic">history</span> | tail -5
+  <span style="color:#bd93f9">528</span>  <span style="color:#8be9fd;font-style:italic">history</span>
+  <span style="color:#bd93f9">529</span>  wc -l ~/.bash_profile
+  <span style="color:#bd93f9">530</span>  wc -l ~/.bash_history
+  <span style="color:#bd93f9">531</span>  <span style="color:#8be9fd;font-style:italic">history</span>
+  <span style="color:#bd93f9">532</span>  <span style="color:#8be9fd;font-style:italic">history</span> | tail -5
+
+$ !-4
+wc -l ~/.bash_profile
+<span style="color:#bd93f9">3</span> /home/mktutes/.bash_profile
+</code></pre></div><h3 id="run-previous-commands-and-optionally-replace-args">Run previous commands and optionally replace args</h3>
+<p>The <code>fc</code> - <strong>fix command</strong> can be used to modify the previous command by performing simple substitutions.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ touch demo_<span style="color:#ff79c6">{</span>01..05<span style="color:#ff79c6">}</span>.csv
+ls
+demo_01.csv  demo_03.csv  demo_05.csv
+demo_02.csv  demo_04.csv
+
+<span style="color:#6272a4"># replace demo with sample, csv with txt </span>
+<span style="color:#6272a4"># and run the last command</span>
+$ <span style="color:#8be9fd;font-style:italic">fc</span> -s <span style="color:#f1fa8c">&#34;demo=sample&#34;</span> <span style="color:#f1fa8c">&#34;csv=txt&#34;</span>
+touch sample_<span style="color:#ff79c6">{</span>01..05<span style="color:#ff79c6">}</span>.txt
+$ ls
+demo_01.csv   demo_04.csv    sample_02.txt  sample_05.txt     
+demo_02.csv   demo_05.csv    sample_03.txt  demo_03.csv  sample_01.txt sample_04.txt  
+</code></pre></div><h2 id="references">References</h2>
+<ol>
+<li><a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Command-Grouping">Grouping Commands: GNU Bash Manual</a></li>
+</ol>
+
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+            
+                <a class="nav nav-prev" href="/part-1/p1-ch7/" title="1.8: Data Manipulation"><i class="fa fa-chevron-left"></i></a>
+            
+            
+                <a class="nav nav-next" href="/part-2/" title="Text Processing"><i class="fa fa-chevron-right"></i></a>
+            
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1632053186"></script>
+    <script src="/js/perfect-scrollbar.min.js?1632053186"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1632053186"></script>
+    <script src="/js/jquery.sticky.js?1632053186"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1632053186"></script>
+    <script src="/js/featherlight.min.js?1632053186"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1632053186"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1632053186"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1632053186"></script>
+    
+
+  </body>
+</html>
+

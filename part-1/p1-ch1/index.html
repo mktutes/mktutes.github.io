@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>1.1: Introduction :: My New Hugo Site</title>
+
+    
+    <link href="/css/nucleus.css?1632053186" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1632053186" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1632053186" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1632053186" rel="stylesheet">
+    <link href="/css/auto-complete.css?1632053186" rel="stylesheet">
+    <link href="/css/theme.css?1632053186" rel="stylesheet">
+    <link href="/css/tabs.css?1632053186" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1632053186" rel="stylesheet">
+    
+    <link href="/css/theme-blue.css?1632053186" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1632053186"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/part-1/p1-ch1/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo"
+  style="
+    color: white;
+    font-family: 'Novacento Sans Wide', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -2px;
+  "
+  href="/">
+  <b style="font-size: 120%;">MK</b> &nbsp; <i class="fab fa-linux"></i> &nbsp; Linux  
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1632053186"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1632053186"></script>
+<script type="text/javascript">
+    
+    
+    var index_url="/index.json";
+    var root_url="/";
+    var baseUri=root_url.replace(/\/$/, '');
+</script>
+<script type="text/javascript" src="/js/search.js?1632053186"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-0/" title="Setting the Stage" class="dd-item">
+        <a href="/part-0/">
+          <b>0. </b>
+Setting the Stage
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-0/p0-ch1/" title="Acknowledgement" class="dd-item">
+        <a href="/part-0/p0-ch1/">
+          
+Acknowledgement
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-1/" title="Getting Started" class="dd-item parent">
+        <a href="/part-1/">
+          <b>1. </b>
+Getting Started
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch1/" title="1.1: Introduction" class="dd-item active">
+        <a href="/part-1/p1-ch1/">
+          
+1.1: Introduction
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch2/" title="1.2: Command Syntax" class="dd-item">
+        <a href="/part-1/p1-ch2/">
+          
+Command Syntax
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch3a/" title="1.3: File System: Basics" class="dd-item">
+        <a href="/part-1/p1-ch3a/">
+          
+1.3: File System: Basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch3b/" title="1.4: File System: Wildcards" class="dd-item">
+        <a href="/part-1/p1-ch3b/">
+          
+1.4: File System: Wildcards
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch4/" title="1.5: Permission" class="dd-item">
+        <a href="/part-1/p1-ch4/">
+          
+1.5: Permission
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch5/" title="1.6: IO Redirection" class="dd-item">
+        <a href="/part-1/p1-ch5/">
+          
+1.6: IO Redirection
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch6/" title="1.7: Viewing Files" class="dd-item">
+        <a href="/part-1/p1-ch6/">
+          
+1.7: Viewing Files
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch7/" title="1.8: Data Manipulation" class="dd-item">
+        <a href="/part-1/p1-ch7/">
+          
+1.8: Data Manipulation
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch8/" title="1.9: Running Commands" class="dd-item">
+        <a href="/part-1/p1-ch8/">
+          
+1.9: Running Commands
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-2/" title="Text Processing" class="dd-item">
+        <a href="/part-2/">
+          <b>2. </b>
+Text Processing
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch1/" title="2.1: Regular Expressions" class="dd-item">
+        <a href="/part-2/p2-ch1/">
+          
+2.1: Regular Expressions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch2/" title="2.2: Vi Editor" class="dd-item">
+        <a href="/part-2/p2-ch2/">
+          
+2.2: Vi Editor
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch3/" title="2.3: Searching Text" class="dd-item">
+        <a href="/part-2/p2-ch3/">
+          
+2.3: Searching Text
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch4/" title="2.4: Text Substitution" class="dd-item">
+        <a href="/part-2/p2-ch4/">
+          
+2.4: Text Substitution
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch5/" title="2.4: AWK programming Language" class="dd-item">
+        <a href="/part-2/p2-ch5/">
+          
+2.4: AWK programming Language
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-3/" title="Beyond the Basics" class="dd-item">
+        <a href="/part-3/">
+          <b>3. </b>
+Beyond the Basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch1/" title="3.1: Process Management" class="dd-item">
+        <a href="/part-3/p3-ch1/">
+          
+3.1: Process Management
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch2/" title="3.2: Scheduling Jobs" class="dd-item">
+        <a href="/part-3/p3-ch2/">
+          
+3.2: Scheduling Jobs
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch4/" title="3.3: Remote Access Commands" class="dd-item">
+        <a href="/part-3/p3-ch4/">
+          
+3.3: Remote Access Commands
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch3/" title="3.4: Archival commands" class="dd-item">
+        <a href="/part-3/p3-ch3/">
+          
+3.4: Archival commands
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch5/" title="3.5: The &#34;find&#34; Command" class="dd-item">
+        <a href="/part-3/p3-ch5/">
+          
+3.5: The &#34;find&#34; Command
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch6/" title="3.6: The &#34;xargs&#34; Command" class="dd-item">
+        <a href="/part-3/p3-ch6/">
+          
+3.6: The &#34;xargs&#34; Command
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-4/" title="Shell Scripting" class="dd-item">
+        <a href="/part-4/">
+          <b>4. </b>
+Shell Scripting
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-4/p4-ch1/" title="4.1: Introduction to Shell Scripts" class="dd-item">
+        <a href="/part-4/p4-ch1/">
+          
+4.1: Introduction to Shell Scripts
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-5/" title="Appendix" class="dd-item">
+        <a href="/part-5/">
+          <b>9. </b>
+Appendix
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-5/p5-ch1/" title="Commands Summary" class="dd-item">
+        <a href="/part-5/p5-ch1/">
+          
+Commands Summary
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-5/p5-ch2/" title="Special Characters" class="dd-item">
+        <a href="/part-5/p5-ch2/">
+          
+Special Characters
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+            <li>
+                <a class="padding" href="http://example.org/tags"><i class='fas fa-tags'></i> Tags</a>
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Linux Basics</a> > <a href='/part-1/'>Getting Started</a> > 1.1: Introduction
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#chapter-1">Chapter 1</a></li>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              1.1: Introduction
+            </h1>
+          
+
+        
+
+
+<h3 id="chapter-1">Chapter 1</h3>
+
+
+
+<div class="notices warning">
+    <div class="label">Warning</div>
+    <p>This topic is still in progress
+Please check later&hellip;</p>
+
+</div>
+
+<h3 id="introduction">Introduction</h3>
+<p>The world is full of computing devices. We interact with these devices using the mouse,
+keyboard and more predominantly using touchscreens and voice assistants. Though these type
+of interactions are user-friendly and intuitive, these options do have limitations and
+often proved to be slow and error-prone to perform repetitive tasks. There is another way,
+a much better way to interact with the systems; by using the keyboard to type commands and
+get the work done. This way help us to become more productive and automate the repetitive
+tasks easily.</p>
+<h3 id="architecture">Architecture</h3>
+<p><img src="/images/01_architecture_01.png" alt="Architecture"></p>
+<p><img src="/images/01_architecture_02.png" alt="Architecture"></p>
+
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+            
+                <a class="nav nav-prev" href="/part-1/" title="Getting Started"><i class="fa fa-chevron-left"></i></a>
+            
+            
+                <a class="nav nav-next" href="/part-1/p1-ch2/" title="1.2: Command Syntax"><i class="fa fa-chevron-right"></i></a>
+            
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1632053186"></script>
+    <script src="/js/perfect-scrollbar.min.js?1632053186"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1632053186"></script>
+    <script src="/js/jquery.sticky.js?1632053186"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1632053186"></script>
+    <script src="/js/featherlight.min.js?1632053186"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1632053186"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1632053186"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1632053186"></script>
+    
+
+  </body>
+</html>
+

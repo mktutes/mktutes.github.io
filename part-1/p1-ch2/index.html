@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>1.2: Command Syntax :: My New Hugo Site</title>
+
+    
+    <link href="/css/nucleus.css?1632053186" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1632053186" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1632053186" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1632053186" rel="stylesheet">
+    <link href="/css/auto-complete.css?1632053186" rel="stylesheet">
+    <link href="/css/theme.css?1632053186" rel="stylesheet">
+    <link href="/css/tabs.css?1632053186" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1632053186" rel="stylesheet">
+    
+    <link href="/css/theme-blue.css?1632053186" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1632053186"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/part-1/p1-ch2/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo"
+  style="
+    color: white;
+    font-family: 'Novacento Sans Wide', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -2px;
+  "
+  href="/">
+  <b style="font-size: 120%;">MK</b> &nbsp; <i class="fab fa-linux"></i> &nbsp; Linux  
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1632053186"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1632053186"></script>
+<script type="text/javascript">
+    
+    
+    var index_url="/index.json";
+    var root_url="/";
+    var baseUri=root_url.replace(/\/$/, '');
+</script>
+<script type="text/javascript" src="/js/search.js?1632053186"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-0/" title="Setting the Stage" class="dd-item">
+        <a href="/part-0/">
+          <b>0. </b>
+Setting the Stage
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-0/p0-ch1/" title="Acknowledgement" class="dd-item">
+        <a href="/part-0/p0-ch1/">
+          
+Acknowledgement
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-1/" title="Getting Started" class="dd-item parent">
+        <a href="/part-1/">
+          <b>1. </b>
+Getting Started
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch1/" title="1.1: Introduction" class="dd-item">
+        <a href="/part-1/p1-ch1/">
+          
+1.1: Introduction
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch2/" title="1.2: Command Syntax" class="dd-item active">
+        <a href="/part-1/p1-ch2/">
+          
+Command Syntax
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch3a/" title="1.3: File System: Basics" class="dd-item">
+        <a href="/part-1/p1-ch3a/">
+          
+1.3: File System: Basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch3b/" title="1.4: File System: Wildcards" class="dd-item">
+        <a href="/part-1/p1-ch3b/">
+          
+1.4: File System: Wildcards
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch4/" title="1.5: Permission" class="dd-item">
+        <a href="/part-1/p1-ch4/">
+          
+1.5: Permission
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch5/" title="1.6: IO Redirection" class="dd-item">
+        <a href="/part-1/p1-ch5/">
+          
+1.6: IO Redirection
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch6/" title="1.7: Viewing Files" class="dd-item">
+        <a href="/part-1/p1-ch6/">
+          
+1.7: Viewing Files
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch7/" title="1.8: Data Manipulation" class="dd-item">
+        <a href="/part-1/p1-ch7/">
+          
+1.8: Data Manipulation
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch8/" title="1.9: Running Commands" class="dd-item">
+        <a href="/part-1/p1-ch8/">
+          
+1.9: Running Commands
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-2/" title="Text Processing" class="dd-item">
+        <a href="/part-2/">
+          <b>2. </b>
+Text Processing
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch1/" title="2.1: Regular Expressions" class="dd-item">
+        <a href="/part-2/p2-ch1/">
+          
+2.1: Regular Expressions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch2/" title="2.2: Vi Editor" class="dd-item">
+        <a href="/part-2/p2-ch2/">
+          
+2.2: Vi Editor
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch3/" title="2.3: Searching Text" class="dd-item">
+        <a href="/part-2/p2-ch3/">
+          
+2.3: Searching Text
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch4/" title="2.4: Text Substitution" class="dd-item">
+        <a href="/part-2/p2-ch4/">
+          
+2.4: Text Substitution
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch5/" title="2.4: AWK programming Language" class="dd-item">
+        <a href="/part-2/p2-ch5/">
+          
+2.4: AWK programming Language
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-3/" title="Beyond the Basics" class="dd-item">
+        <a href="/part-3/">
+          <b>3. </b>
+Beyond the Basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch1/" title="3.1: Process Management" class="dd-item">
+        <a href="/part-3/p3-ch1/">
+          
+3.1: Process Management
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch2/" title="3.2: Scheduling Jobs" class="dd-item">
+        <a href="/part-3/p3-ch2/">
+          
+3.2: Scheduling Jobs
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch4/" title="3.3: Remote Access Commands" class="dd-item">
+        <a href="/part-3/p3-ch4/">
+          
+3.3: Remote Access Commands
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch3/" title="3.4: Archival commands" class="dd-item">
+        <a href="/part-3/p3-ch3/">
+          
+3.4: Archival commands
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch5/" title="3.5: The &#34;find&#34; Command" class="dd-item">
+        <a href="/part-3/p3-ch5/">
+          
+3.5: The &#34;find&#34; Command
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch6/" title="3.6: The &#34;xargs&#34; Command" class="dd-item">
+        <a href="/part-3/p3-ch6/">
+          
+3.6: The &#34;xargs&#34; Command
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-4/" title="Shell Scripting" class="dd-item">
+        <a href="/part-4/">
+          <b>4. </b>
+Shell Scripting
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-4/p4-ch1/" title="4.1: Introduction to Shell Scripts" class="dd-item">
+        <a href="/part-4/p4-ch1/">
+          
+4.1: Introduction to Shell Scripts
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-5/" title="Appendix" class="dd-item">
+        <a href="/part-5/">
+          <b>9. </b>
+Appendix
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-5/p5-ch1/" title="Commands Summary" class="dd-item">
+        <a href="/part-5/p5-ch1/">
+          
+Commands Summary
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-5/p5-ch2/" title="Special Characters" class="dd-item">
+        <a href="/part-5/p5-ch2/">
+          
+Special Characters
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+            <li>
+                <a class="padding" href="http://example.org/tags"><i class='fas fa-tags'></i> Tags</a>
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Linux Basics</a> > <a href='/part-1/'>Getting Started</a> > 1.2: Command Syntax
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#chapter-2">Chapter 2</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#what-is-a-command-">What is a command ?</a></li>
+        <li><a href="#arguments">Arguments</a></li>
+        <li><a href="#options">Options</a></li>
+      </ul>
+    </li>
+    <li><a href="#basic-commands">Basic Commands</a>
+      <ul>
+        <li><a href="#1-echo-str-displays-text-on-screen">1. <code>echo STR</code>: displays text on screen</a></li>
+        <li><a href="#2-pwd--print-working-directory">2. <code>pwd</code> : print working directory</a></li>
+        <li><a href="#3-date--set--display-current-date-and-time">3. <code>date</code> : Set / Display Current Date and Time</a></li>
+        <li><a href="#4-clear--clears-the-screen-">4. <code>clear</code> : Clears the Screen !!</a></li>
+        <li><a href="#5-sleep-n--sleep-for-n-seconds">5. <code>sleep N</code> : sleep for <code>N</code> seconds</a></li>
+        <li><a href="#6-cal--displays-calendar">6. <code>cal</code> : displays calendar</a></li>
+        <li><a href="#7-man-cmd--display-manual-pages-for-a-command">7. <code>man CMD</code> : display manual pages for a command</a></li>
+        <li><a href="#8-history--displays-command-history">8. <code>history</code> : displays command history</a></li>
+        <li><a href="#9-passwd--change-password">9. <code>passwd</code> : change password</a></li>
+        <li><a href="#10-seq--print-number-sequence">10. <code>seq</code> : print number sequence</a></li>
+        <li><a href="#11-exit--exit-current-process">11. <code>exit</code> : exit current process</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              1.2: Command Syntax
+            </h1>
+          
+
+        
+
+
+<h3 id="chapter-2">Chapter 2</h3>
+<h3 id="overview">Overview</h3>
+<p>Commands are the backbone of the Linux operating system.  There are thousands of commands
+in different categories and remembering all the commands in impossible.  What we really
+need is to understand the syntax of the command well and the components that make up a
+command string.In this chapter, we will look into the <strong>command syntax</strong>, the components that make up various commands that we use on a daily basis. Understanding the structure of the command makes learning and using new
+commands easier.</p>
+<p>The <strong>Unix Philosophy</strong> is all about simplicity and reusability. The commands are there <em>to do only one thing and do it really well</em>. There are features like <em>redirection</em> that helps us use multiple commands together to solve complex problems however the commands themselves focus on providing solution for a single problem.</p>
+<blockquote>
+<p>Some commands appear before we cover them in detail. These commands serve as supplement to demonstrate other commands. For example the <code>ls</code> command that is used to list files and directories. We will see these commands in detail at the later sections</p>
+</blockquote>
+<p>Let us look at couple of examples first</p>
+<p>The <code>echo</code> command can be used to display text on the screen. The command accepts sequence of characters as <em>argument</em> and display it on the screen.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Hello World&#34;</span>
+Hello Word
+</code></pre></div><p>The <code>date</code> command displays current date and time on the screen. We can modify the default format by passing <em>date format string</em> as <em>argument</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># date: default format</span>
+$ date
+Fri Jul  <span style="color:#bd93f9">2</span> 15:05:19 IST <span style="color:#bd93f9">2021</span>
+
+<span style="color:#6272a4"># date: display date in YYYY-MM-DD format</span>
+$ date +<span style="color:#f1fa8c">&#34;%Y-%m-%d&#34;</span>
+2021-07-02
+</code></pre></div><h3 id="what-is-a-command-">What is a command ?</h3>
+<p>A command contains one or more words that are separated by <em>spaces</em>, which will be executed when we press the <code>enter/return</code> key . The first word is the verb that refers the action followed by zero or more words that are called <strong>options</strong> or <strong>argumets</strong>. The basic syntax of a command is as follows</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">$ command [option(s)] [argument(s)]
+</code></pre></div><blockquote>
+<p>We usually code options after the command followed by the arguments.</p>
+</blockquote>
+<h3 id="arguments">Arguments</h3>
+<p>Arguments are entities (usually files, text or numbers) that the command will act on. Lot of commands have default <em>argument</em>. For example, the <code>ls</code> command that is used to list files and directories accepts a directory path as argument. If we don&rsquo;t provide one, it will take the <em>current working directory</em> as the default argument.</p>
+<h3 id="options">Options</h3>
+<p>Option, also called as flag can modify the behavior of the command. For example, most of the commands will not display any message when they get executed successfully. We use option to turn on the <em>verbosity</em> of the command.</p>
+<p>Options can have their own arguments too. For example: the awk command&rsquo;s option <code>-F,</code> uses <code>,</code> as an argument (field delimiter) and <code>grep</code> command&rsquo;s <code>--color=always</code> uses <code>always</code> to highlight searched text.</p>
+<p>Options are coded with a leading <code>-</code> or <code>--</code>. The ones with <code>-</code> are usually followed by a single character; <code>-v</code> for example and the ones with <code>--</code> are followed by multiple characters; <code>--verbose</code> for example.</p>
+<blockquote>
+<p>The <code>find</code> command is an exception to the way <code>-</code> and <code>--</code> are used. Its options use <code>-</code> followed by a word; <code>-type</code>, <code>-user</code>, <code>-atime</code> for example</p>
+</blockquote>
+<p>We can merge multiple single character options and code with one leading <code>-</code>; for example <code>mkdir -p -v data/input</code> or <code>mkdir -pv data/input</code>.</p>
+<p>Each command supports set of options and usually there can be both <code>-</code> and <code>--</code> versions. We can use the <code>-</code> version for our day-to-day use on the <em>shell</em> whereas the <code>--</code> can be used in the <em>shell scripts</em> that works as a self-documentation. For example, the <code>mkdir</code> command that creates directories can use <code>-v</code> or <code>--verbose</code> to, you guessed it right, turn on the verbosity of the command.</p>
+<blockquote>
+<p><strong>verbosity</strong>: the quality of using more words than needed; ..just like this article.</p>
+</blockquote>
+<p>Since several people contributed to the development of UNIX, there are cases where an option has different meaning for different commands. For example <code>-v</code> means <em>verbose</em> mostly, it also means <em>version</em> for some commands and <em>inverse match</em> in the <code>grep</code> command. On the other hand, same functionality would use different option across commands. For example, <code>-d</code>, <code>-t</code>, <code>-s</code> and <code>-F</code> are used to provide <em>field separators</em> to the <code>cut</code>, <code>sort</code>, <code>column</code> and <code>awk</code> commands respectively</p>
+<p>Finally, since <code>-</code> has a special meaning, if we want to use <code>-</code> as a part of argument, we need to simply code <code>--</code> to mark the end of the options.</p>
+<p>To summarize, Options</p>
+<ul>
+<li>are also called as flags that can modify the behavior of the command</li>
+<li>start with a <code>-</code> or <code>--</code> prefix</li>
+<li>single <code>-</code> prefix is followed by a single character and we can code multiple options with one leading <code>-</code> or individually; <code>-pv</code> or <code>-p</code> and <code>-v</code></li>
+<li>double <code>--</code> prefix is followed by a multi-character option name; <code>--verbose</code>, <code>--all</code>, &hellip;</li>
+<li>standalone <code>--</code> signals end of options and whatever is passed after the <code>--</code> will be treated as argument</li>
+<li>same option may mean different functionality across commands</li>
+<li>same functionality may be represented by different options across commands</li>
+</ul>
+<h2 id="basic-commands">Basic Commands</h2>
+<p>This section covers the basic commands that we will encounter when we start learning the command line interface. These commands are there to get information about the system such as current date, current working directory, clear screen etc..</p>
+<blockquote>
+<p>These commands gives us a good start to get ourselves comfortable using the shell / CLI</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>echo &lt;STR&gt;</code></td>
+<td>print the string on the screen</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>pwd</code></td>
+<td>print current working directory</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>date</code></td>
+<td>print current date and time</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>clear</code></td>
+<td>clear the screen, use the <code>CTRL-L</code> key as alternate</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>sleep &lt;N&gt;</code></td>
+<td>sleeps for <strong>N</strong> seconds</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>cal</code></td>
+<td>displays current month&rsquo;s calendar in tabular format.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>man CMD</code></td>
+<td>displays help text for the <strong>CMD</strong> passed as argument.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>history</code></td>
+<td>display the list of commands ran so far</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>passwd</code></td>
+<td>change password</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>seq</code></td>
+<td>create number sequence</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>exit</code></td>
+<td>terminate session</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-echo-str-displays-text-on-screen">1. <code>echo STR</code>: displays text on screen</h3>
+<p>By default, the <code>echo</code> command simply displays the argument on the screen. If we provide a <strong>shell variable</strong>, it will substitute the value instead.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-n</code></td>
+<td>suppresses newline</td>
+</tr>
+<tr>
+<td><code>-e</code></td>
+<td>interprets escape sequences like <code>\n</code>, \t` etc</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># displays text and adds newline</span>
+$ <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Hello World
+</span><span style="color:#f1fa8c">Hello World
+</span><span style="color:#f1fa8c"></span>$<span style="color:#f1fa8c">
+</span><span style="color:#f1fa8c">
+</span><span style="color:#f1fa8c"># displays a new line if there are no arguments
+</span><span style="color:#f1fa8c"></span>$<span style="color:#f1fa8c"> echo
+</span><span style="color:#f1fa8c">
+</span><span style="color:#f1fa8c"></span>$<span style="color:#f1fa8c">
+</span><span style="color:#f1fa8c">
+</span><span style="color:#f1fa8c"># displays text; &#39;-n&#39; suppresses new line
+</span><span style="color:#f1fa8c"></span>$<span style="color:#f1fa8c"> echo -n &#34;</span>Hello World
+Hello World$
+
+<span style="color:#6272a4"># interprets tab and newline</span>
+$ <span style="color:#8be9fd;font-style:italic">echo</span> -n -e <span style="color:#f1fa8c">&#34;Hello\tWorld\n&#34;</span>
+Hello   World
+$
+
+<span style="color:#6272a4"># display value of $USER: shell variable</span>
+$ <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Hello, </span><span style="color:#8be9fd;font-style:italic">$USER</span><span style="color:#f1fa8c">&#34;</span>
+Hello, mk
+</code></pre></div><h3 id="2-pwd--print-working-directory">2. <code>pwd</code> : print working directory</h3>
+<p><code>pwd</code> is one of the simplest commands we will encounter in Linux. It simply displays current directory you are in. When you are in the <em>shell</em>, you will be in your <strong>home directory</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#8be9fd;font-style:italic">pwd</span>
+/home/mk
+</code></pre></div><h3 id="3-date--set--display-current-date-and-time">3. <code>date</code> : Set / Display Current Date and Time</h3>
+<p>By default, it prints the date in <code>ddd, dd mmm yyyy HH:MM:SS. AM|PM TZ</code> format. If we have admin access, we can set the date and time. Here is the basic syntax.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ date +<span style="color:#f1fa8c">&#34;format string&#34;</span>
+</code></pre></div><p>We can use format strings to print date in several formats</p>
+<table>
+<thead>
+<tr>
+<th>Format String</th>
+<th>Meaning</th>
+<th>Value(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%d</td>
+<td>Current Date</td>
+<td>01-31</td>
+</tr>
+<tr>
+<td>%m</td>
+<td>Current Month</td>
+<td>01-12</td>
+</tr>
+<tr>
+<td>%y</td>
+<td>Current Year 2 digits</td>
+<td>00-99</td>
+</tr>
+<tr>
+<td>%Y</td>
+<td>Current Year 4 digits</td>
+<td>1999, 2020 etc..</td>
+</tr>
+<tr>
+<td>%H</td>
+<td>Hour</td>
+<td>00-23</td>
+</tr>
+<tr>
+<td>%M</td>
+<td>Minutes</td>
+<td>00-59</td>
+</tr>
+<tr>
+<td>%S</td>
+<td>Seconds</td>
+<td>00-59</td>
+</tr>
+<tr>
+<td>%s</td>
+<td>Seconds since 1-Jan-1979</td>
+<td>seconds as integer</td>
+</tr>
+</tbody>
+</table>
+<p>For complete reference, please refer the manual pages for the <code>date</code> command; <code>man date</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ date
+Sat <span style="color:#bd93f9">03</span> Jul <span style="color:#bd93f9">2021</span> 03:59:27 PM UTC
+
+$ date +<span style="color:#f1fa8c">&#34;%Y%m%d&#34;</span>
+<span style="color:#bd93f9">20210703</span>
+
+$  date +<span style="color:#f1fa8c">&#34;%Y%m%d%H%M%S&#34;</span>
+<span style="color:#bd93f9">20210703155949</span>
+
+$ date +<span style="color:#f1fa8c">&#34;%Y-%m-%d&#34;</span>
+2021-07-03
+$ date +<span style="color:#f1fa8c">&#34;%F&#34;</span>
+2021-07-03
+</code></pre></div><h3 id="4-clear--clears-the-screen-">4. <code>clear</code> : Clears the Screen !!</h3>
+<p>The <code>clear</code> command cleans out the display and put the command prompt <code>$</code> on the first line of the terminal. Based on the terminal settings, you may or may not scroll back. In some emulators, <code>clear</code> may not work. We can use <strong>Control key + l</strong> <code>CTRL-L</code> to clear out the screen</p>
+<h3 id="5-sleep-n--sleep-for-n-seconds">5. <code>sleep N</code> : sleep for <code>N</code> seconds</h3>
+<p>The <code>sleep</code> command blocks the terminal for <code>N</code> seconds and return the command prompt back to the user. It can be used in wait and watch scenarios. For example, wait for 5 seconds and lookup a file in a directory. While learning, we can use <code>sleep</code> to simulate the effect of a long running command.</p>
+<blockquote>
+<p>We can run commands one by one or submit the commands at the same time using semicolon <strong><code>;</code></strong> as delimiter</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ date;<span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Start Sleep&#34;</span>;sleep 5; date
+Sat <span style="color:#bd93f9">03</span> Jul <span style="color:#bd93f9">2021</span> 04:09:44 PM UTC
+Start Sleep
+Sat <span style="color:#bd93f9">03</span> Jul <span style="color:#bd93f9">2021</span> 04:09:49 PM UTC
+</code></pre></div><h3 id="6-cal--displays-calendar">6. <code>cal</code> : displays calendar</h3>
+<p>The <code>cal</code> command displays days of current month in tabular format with current date highlighted. We can pass month and year or year as argument.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cal
+     July <span style="color:#bd93f9">2021</span>
+Su Mo Tu We Th Fr Sa
+             <span style="color:#bd93f9">1</span>  <span style="color:#bd93f9">2</span>  <span style="color:#bd93f9">3</span>
+ <span style="color:#bd93f9">4</span>  <span style="color:#bd93f9">5</span>  <span style="color:#bd93f9">6</span>  <span style="color:#bd93f9">7</span>  <span style="color:#bd93f9">8</span>  <span style="color:#bd93f9">9</span> <span style="color:#bd93f9">10</span>
+<span style="color:#bd93f9">11</span> <span style="color:#bd93f9">12</span> <span style="color:#bd93f9">13</span> <span style="color:#bd93f9">14</span> <span style="color:#bd93f9">15</span> <span style="color:#bd93f9">16</span> <span style="color:#bd93f9">17</span>
+<span style="color:#bd93f9">18</span> <span style="color:#bd93f9">19</span> <span style="color:#bd93f9">20</span> <span style="color:#bd93f9">21</span> <span style="color:#bd93f9">22</span> <span style="color:#bd93f9">23</span> <span style="color:#bd93f9">24</span>
+<span style="color:#bd93f9">25</span> <span style="color:#bd93f9">26</span> <span style="color:#bd93f9">27</span> <span style="color:#bd93f9">28</span> <span style="color:#bd93f9">29</span> <span style="color:#bd93f9">30</span> <span style="color:#bd93f9">31</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cal dec <span style="color:#bd93f9">2020</span>
+   December <span style="color:#bd93f9">2020</span>
+Su Mo Tu We Th Fr Sa
+       <span style="color:#bd93f9">1</span>  <span style="color:#bd93f9">2</span>  <span style="color:#bd93f9">3</span>  <span style="color:#bd93f9">4</span>  <span style="color:#bd93f9">5</span>
+ <span style="color:#bd93f9">6</span>  <span style="color:#bd93f9">7</span>  <span style="color:#bd93f9">8</span>  <span style="color:#bd93f9">9</span> <span style="color:#bd93f9">10</span> <span style="color:#bd93f9">11</span> <span style="color:#bd93f9">12</span>
+<span style="color:#bd93f9">13</span> <span style="color:#bd93f9">14</span> <span style="color:#bd93f9">15</span> <span style="color:#bd93f9">16</span> <span style="color:#bd93f9">17</span> <span style="color:#bd93f9">18</span> <span style="color:#bd93f9">19</span>
+<span style="color:#bd93f9">20</span> <span style="color:#bd93f9">21</span> <span style="color:#bd93f9">22</span> <span style="color:#bd93f9">23</span> <span style="color:#bd93f9">24</span> <span style="color:#bd93f9">25</span> <span style="color:#bd93f9">26</span>
+<span style="color:#bd93f9">27</span> <span style="color:#bd93f9">28</span> <span style="color:#bd93f9">29</span> <span style="color:#bd93f9">30</span> <span style="color:#bd93f9">31</span>
+</code></pre></div><h3 id="7-man-cmd--display-manual-pages-for-a-command">7. <code>man CMD</code> : display manual pages for a command</h3>
+<p>The <code>man</code> command is used to access the manual pages for commands and system calls. It displays one screenful of documentation at a time and we can use the following <em>sub-commands</em> to navigate the man pages.</p>
+<ol>
+<li><code>f</code> or <code>spacebar</code> : go to the next page</li>
+<li><code>b</code> : go to previous page</li>
+<li><code>enter</code> key or down arrow : scroll next line</li>
+<li><code>up arrow</code> : scroll previous line</li>
+<li><code>q</code> : quit man page</li>
+</ol>
+<h3 id="8-history--displays-command-history">8. <code>history</code> : displays command history</h3>
+<p>Linux keeps track of the commands executed across various login sessions. By default, it will store the last 500 commands. We can use the <code>history</code> command to list the previously executed commands along with the <em>line number</em>.  There are some <em>shell</em> expansions to rerun or just print any of these commands.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#8be9fd;font-style:italic">history</span>
+   <span style="color:#bd93f9">1</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Hello World&#34;</span>
+   <span style="color:#bd93f9">2</span> date 
+   <span style="color:#bd93f9">3</span> <span style="color:#8be9fd;font-style:italic">pwd</span>
+   <span style="color:#bd93f9">4</span> clear
+   <span style="color:#bd93f9">5</span> cal
+   ...
+</code></pre></div><p>We can rerun the last command by using <code>!!</code> characters. If we use <code>!!:p</code>, <em>shell</em> just prints the last command instead of running it</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ date
+Sat <span style="color:#bd93f9">03</span> Jul <span style="color:#bd93f9">2021</span> 04:37:37 PM UTC
+$ !!
+date
+Sat <span style="color:#bd93f9">03</span> Jul <span style="color:#bd93f9">2021</span> 04:37:39 PM UTC
+</code></pre></div><p>The <code>!N</code> can be used to execute the <code>Nth</code> command in the history and <code>!N:p</code> prints the <code>Nth</code> command instead of running it</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ !10
+date
+Sat <span style="color:#bd93f9">03</span> Jul <span style="color:#bd93f9">2021</span> 04:40:10 PM UTC
+$ !10:p
+date
+</code></pre></div><p><strong>there is more to history expansion, we shall look into that later</strong></p>
+<h3 id="9-passwd--change-password">9. <code>passwd</code> : change password</h3>
+<p>The <code>passwd</code> command is used to change the existing password. This command is useful to proactively change the password in a multi-user server that has password expiry policy. The command will prompt for the <em>current password</em>. If correct password is provided, it will ask for new password and once reenter the new password again, it will change the password</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ passwd
+Changing password <span style="color:#ff79c6">for</span> mk.
+Current password:
+New Password:
+Retype Password:
+passwd: password updated successfully.
+</code></pre></div><h3 id="10-seq--print-number-sequence">10. <code>seq</code> : print number sequence</h3>
+<p>The <code>seq</code> command can be used to generate number sequence. It requires one numeric argument as <em>stop</em> value and it generates numbers between 1 and <em>stop</em> value by increment of one. We can also provide <em>start</em> and <em>step</em> values. The number can be integers or decimals</p>
+<ul>
+<li>one argument: <em>stop</em> value; start and step == 1</li>
+<li>two arguments: <em>start</em>, <em>stop</em> values; step == 1</li>
+<li>three arguments: <em>start</em>, <em>step</em>, <em>stop</em> values</li>
+</ul>
+<p>The <code>-w</code> option pads smaller numbers with leading zeros and <code>-f &quot;FORMAT STR&quot;</code> can be used format numbers like <code>printf</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># start at 1 (default), increment by 1 (default), stop at 5</span>
+$ seq <span style="color:#bd93f9">4</span>
+<span style="color:#bd93f9">1</span>
+<span style="color:#bd93f9">2</span>
+<span style="color:#bd93f9">3</span>
+<span style="color:#bd93f9">4</span>
+
+<span style="color:#6272a4"># start at 2, increment by 1 (default), stop at 5</span>
+$ seq <span style="color:#bd93f9">2</span> <span style="color:#bd93f9">4</span>
+<span style="color:#bd93f9">2</span>
+<span style="color:#bd93f9">3</span>
+<span style="color:#bd93f9">4</span>
+
+<span style="color:#6272a4"># start at 2, increment by 2, stop at 5</span>
+$ seq <span style="color:#bd93f9">2</span> <span style="color:#bd93f9">2</span> <span style="color:#bd93f9">5</span>
+<span style="color:#bd93f9">2</span>
+<span style="color:#bd93f9">4</span>
+</code></pre></div><h3 id="11-exit--exit-current-process">11. <code>exit</code> : exit current process</h3>
+<p>The <code>exit</code> command terminates the current process. If it is entered in the command prompt, it will terminate the session. We can also use the <code>logout</code> command</p>
+<p><strong>Extras: Why use <code>-</code> and <code>--</code> as option prefix</strong></p>
+<p>As far as I understood, the earlier commands had <code>-</code> with <strong>single-character</strong> options first and since multiple <code>-</code> options can be combined together (-p, -v vs -pv), the developers might have needed a different syntax for <strong>multi-character</strong> options and used <code>--</code> for that.  For example, the <code>ls</code> command has <code>--all</code> option to include hidden files in the output, if we code <code>-all</code> then <code>ls</code> will take it as <code>-a</code>, <code>-l</code> and <code>-l</code>. Confusing ?? Try <code>ls -all</code> and <code>ls --all</code></p>
+
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+            
+                <a class="nav nav-prev" href="/part-1/p1-ch1/" title="1.1: Introduction"><i class="fa fa-chevron-left"></i></a>
+            
+            
+                <a class="nav nav-next" href="/part-1/p1-ch3a/" title="1.3: File System: Basics"><i class="fa fa-chevron-right"></i></a>
+            
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1632053186"></script>
+    <script src="/js/perfect-scrollbar.min.js?1632053186"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1632053186"></script>
+    <script src="/js/jquery.sticky.js?1632053186"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1632053186"></script>
+    <script src="/js/featherlight.min.js?1632053186"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1632053186"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1632053186"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1632053186"></script>
+    
+
+  </body>
+</html>
+

@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>1.3: File System: Basics :: My New Hugo Site</title>
+
+    
+    <link href="/css/nucleus.css?1632053186" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1632053186" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1632053186" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1632053186" rel="stylesheet">
+    <link href="/css/auto-complete.css?1632053186" rel="stylesheet">
+    <link href="/css/theme.css?1632053186" rel="stylesheet">
+    <link href="/css/tabs.css?1632053186" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1632053186" rel="stylesheet">
+    
+    <link href="/css/theme-blue.css?1632053186" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1632053186"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/part-1/p1-ch3a/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo"
+  style="
+    color: white;
+    font-family: 'Novacento Sans Wide', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -2px;
+  "
+  href="/">
+  <b style="font-size: 120%;">MK</b> &nbsp; <i class="fab fa-linux"></i> &nbsp; Linux  
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1632053186"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1632053186"></script>
+<script type="text/javascript">
+    
+    
+    var index_url="/index.json";
+    var root_url="/";
+    var baseUri=root_url.replace(/\/$/, '');
+</script>
+<script type="text/javascript" src="/js/search.js?1632053186"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-0/" title="Setting the Stage" class="dd-item">
+        <a href="/part-0/">
+          <b>0. </b>
+Setting the Stage
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-0/p0-ch1/" title="Acknowledgement" class="dd-item">
+        <a href="/part-0/p0-ch1/">
+          
+Acknowledgement
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-1/" title="Getting Started" class="dd-item parent">
+        <a href="/part-1/">
+          <b>1. </b>
+Getting Started
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch1/" title="1.1: Introduction" class="dd-item">
+        <a href="/part-1/p1-ch1/">
+          
+1.1: Introduction
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch2/" title="1.2: Command Syntax" class="dd-item">
+        <a href="/part-1/p1-ch2/">
+          
+Command Syntax
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch3a/" title="1.3: File System: Basics" class="dd-item active">
+        <a href="/part-1/p1-ch3a/">
+          
+1.3: File System: Basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch3b/" title="1.4: File System: Wildcards" class="dd-item">
+        <a href="/part-1/p1-ch3b/">
+          
+1.4: File System: Wildcards
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch4/" title="1.5: Permission" class="dd-item">
+        <a href="/part-1/p1-ch4/">
+          
+1.5: Permission
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch5/" title="1.6: IO Redirection" class="dd-item">
+        <a href="/part-1/p1-ch5/">
+          
+1.6: IO Redirection
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch6/" title="1.7: Viewing Files" class="dd-item">
+        <a href="/part-1/p1-ch6/">
+          
+1.7: Viewing Files
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch7/" title="1.8: Data Manipulation" class="dd-item">
+        <a href="/part-1/p1-ch7/">
+          
+1.8: Data Manipulation
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch8/" title="1.9: Running Commands" class="dd-item">
+        <a href="/part-1/p1-ch8/">
+          
+1.9: Running Commands
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-2/" title="Text Processing" class="dd-item">
+        <a href="/part-2/">
+          <b>2. </b>
+Text Processing
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch1/" title="2.1: Regular Expressions" class="dd-item">
+        <a href="/part-2/p2-ch1/">
+          
+2.1: Regular Expressions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch2/" title="2.2: Vi Editor" class="dd-item">
+        <a href="/part-2/p2-ch2/">
+          
+2.2: Vi Editor
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch3/" title="2.3: Searching Text" class="dd-item">
+        <a href="/part-2/p2-ch3/">
+          
+2.3: Searching Text
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch4/" title="2.4: Text Substitution" class="dd-item">
+        <a href="/part-2/p2-ch4/">
+          
+2.4: Text Substitution
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch5/" title="2.4: AWK programming Language" class="dd-item">
+        <a href="/part-2/p2-ch5/">
+          
+2.4: AWK programming Language
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-3/" title="Beyond the Basics" class="dd-item">
+        <a href="/part-3/">
+          <b>3. </b>
+Beyond the Basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch1/" title="3.1: Process Management" class="dd-item">
+        <a href="/part-3/p3-ch1/">
+          
+3.1: Process Management
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch2/" title="3.2: Scheduling Jobs" class="dd-item">
+        <a href="/part-3/p3-ch2/">
+          
+3.2: Scheduling Jobs
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch4/" title="3.3: Remote Access Commands" class="dd-item">
+        <a href="/part-3/p3-ch4/">
+          
+3.3: Remote Access Commands
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch3/" title="3.4: Archival commands" class="dd-item">
+        <a href="/part-3/p3-ch3/">
+          
+3.4: Archival commands
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch5/" title="3.5: The &#34;find&#34; Command" class="dd-item">
+        <a href="/part-3/p3-ch5/">
+          
+3.5: The &#34;find&#34; Command
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch6/" title="3.6: The &#34;xargs&#34; Command" class="dd-item">
+        <a href="/part-3/p3-ch6/">
+          
+3.6: The &#34;xargs&#34; Command
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-4/" title="Shell Scripting" class="dd-item">
+        <a href="/part-4/">
+          <b>4. </b>
+Shell Scripting
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-4/p4-ch1/" title="4.1: Introduction to Shell Scripts" class="dd-item">
+        <a href="/part-4/p4-ch1/">
+          
+4.1: Introduction to Shell Scripts
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-5/" title="Appendix" class="dd-item">
+        <a href="/part-5/">
+          <b>9. </b>
+Appendix
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-5/p5-ch1/" title="Commands Summary" class="dd-item">
+        <a href="/part-5/p5-ch1/">
+          
+Commands Summary
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-5/p5-ch2/" title="Special Characters" class="dd-item">
+        <a href="/part-5/p5-ch2/">
+          
+Special Characters
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+            <li>
+                <a class="padding" href="http://example.org/tags"><i class='fas fa-tags'></i> Tags</a>
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Linux Basics</a> > <a href='/part-1/'>Getting Started</a> > 1.3: File System: Basics
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#chapter-3">Chapter 3</a></li>
+        <li><a href="#introduction">Introduction</a></li>
+      </ul>
+    </li>
+    <li><a href="#hfs-hierarchical-file-system">HFS: Hierarchical File System</a></li>
+    <li><a href="#path">Path</a>
+      <ul>
+        <li><a href="#absolute-path">Absolute Path</a></li>
+        <li><a href="#relative-path">Relative Path</a></li>
+        <li><a href="#absolute-vs-relative-paths">Absolute vs Relative Paths</a></li>
+      </ul>
+    </li>
+    <li><a href="#file-system-commands-part-i">File System Commands: Part I</a>
+      <ul>
+        <li><a href="#mkdir--create-directories"><code>mkdir</code> : create directories</a></li>
+        <li><a href="#cd--change-directory"><code>cd</code> : change directory</a></li>
+        <li><a href="#rmdir--remove-empty-directories-only"><code>rmdir</code> : remove &ldquo;empty&rdquo; directories ONLY</a></li>
+        <li><a href="#touch--create-empty-files"><code>touch</code> : create empty files</a></li>
+        <li><a href="#file--determine-file-type"><code>file</code> : determine file type</a></li>
+        <li><a href="#ln--create-links-or-shortcuts"><code>ln</code> : create links or shortcuts</a></li>
+        <li><a href="#tree--display-contents-of-directory-recursively"><code>tree</code> : display contents of directory recursively</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              1.3: File System: Basics
+            </h1>
+          
+
+        
+
+
+<h3 id="chapter-3">Chapter 3</h3>
+
+
+
+<div class="notices warning">
+    <div class="label">Warning</div>
+    <p>This topic is still in progress
+Please check later&hellip;</p>
+
+</div>
+
+<h3 id="introduction">Introduction</h3>
+<p>File System is one of the core components of any operating system. It provides a well-defined structure to store, organize and retrieve content and the metadata associated with the file such as owner, permissions, size, timestamps etc.. Each operating system has its own <em>File System</em> definition, for example Windows uses <strong>NTFS</strong> and Mac uses <strong>APFS</strong>. Both Windows and Mac supports old <strong>FAT32</strong> file system.</p>
+<blockquote>
+<p>A <strong>File</strong> can be informally defined as the collection of records and fields also known as data that are stored as stream of bytes. It is the smallest logical unit of storage in the OS.</p>
+</blockquote>
+<blockquote>
+<p>A <strong>directory</strong> is a container to store other directories and files. It is a special type of file that contains the references to itself, the parent and other files and directories stored in it.</p>
+</blockquote>
+<p>Unix and Unix-like OS use the <strong>HFS</strong> - <em>Hierarchical File System</em>. Though each Unix-like OS may have a unique name for the file system such as <strong>JFS</strong>, <strong>ext3</strong>, <strong>ext4</strong>, these are simple the implementations of the <strong>HFS</strong> - the original file system of the <strong>Unix</strong> operating system. Each of these file system may have extended attributes such as maximum size limits per each file and the file system itself.</p>
+<p>In this chapter, let us discuss the following topics</p>
+<ul>
+<li>The features of the file system, how files are organized and the metadata stored along with the contents</li>
+<li><strong>Path</strong>: textual representation that uniquely identifies file or a directory</li>
+<li><strong>Wildcards</strong>: patterns to access one or more files</li>
+<li><strong>Commands</strong>: create, access, delete, list files and directories</li>
+</ul>
+<h2 id="hfs-hierarchical-file-system">HFS: Hierarchical File System</h2>
+<p>Unix treats everything as files; data, source code, executables, even devices such as display, hard disks. The HFS provides a standard way to store and access these files. As the name suggests, Hierarchical FS is a tree-like structure that has nested directories and files. A <strong>directory</strong> that resides within another directory is called a <strong>sub-directory</strong>.</p>
+<p>The HFS has single entry point called the <strong>root directory</strong>. It is represented by the backslash <strong><code>/</code></strong> not the name <strong><code>root</code></strong>. This is an important distinction to remember. Every file and directory in the system is nested under the root directory, even when you attach devices such as USB, these devices will show up under the root directory. This is another difference between Windows and Unix OS. In Windows, each device will show up as independent drives <code>E:</code>, <code>G:</code> etc..</p>
+<p><img src="/images/03a_hfs.png" alt=""></p>
+<p>Images by <a href="%22https://pixabay.com/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5957122%22">Gerd Altmann</a><!-- raw HTML omitted --> from <a href="%22https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5957122%22">Pixabay</a> and <a href="%22https://pixabay.com/users/mcmurryjulie-2375405/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2889024%22">mcmurryjulie</a> from <a href="%22https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2889024%22">Pixabay</a></p>
+<p>Here is the graphical representation of the common directories and files we would see under the root directory.</p>
+<p><img src="/images/03b_hfs.png" alt=""></p>
+<p>The above illustration is not all inclusive but a snapshot of the common directories and files we will see in Unix-like systems. These directories contain commands, config files and other info needed for the proper functioning of the system.</p>
+<ul>
+<li><code>bin</code> : contains commonly used commands such as <code>echo</code>, <code>ls</code>; <code>bin</code> is the short form for <em>binaries</em></li>
+<li><code>sbin</code> : system binaries that are mostly used by <em>sysadmins</em></li>
+<li><code>dev</code> : contains device specific files; <code>tty*</code> for displays, <code>sda*</code> for hard-drives and other logical devices like <code>/dev/null</code> and <code>/dev/urandom</code></li>
+<li><code>etc</code> : contains system configuration files. For example <code>/etc/shells</code> contains list of available shells</li>
+<li><code>tmp</code> : store temporary files that are periodically cleaned up.</li>
+<li><code>usr</code> : contains commands that are installed separately, non-core commands, interpreters etc&hellip;</li>
+<li><code>home</code> : contains one directory per user that can logon to the system.  <code>/home/admin</code>, <code>/home/dbuser</code> etc..</li>
+<li><code>lib</code> : contains system libraries</li>
+<li><code>var</code> : contains growing files such as logs, databases. Most of the directories under the root directory won&rsquo;t grow drastically in size except the <code>var</code> and <code>home</code> directories</li>
+</ul>
+<h2 id="path">Path</h2>
+<p>In the chapter about <em>command syntax</em>, we saw that files and directories can be passed as <em>arguments</em> to commands. In order to access the files, we need an unique way of identifying the files. The <strong>path</strong> is a textual representation that can uniquely identify any file or directory in the system.</p>
+<p>There are two ways we can represent the file path.</p>
+<ol>
+<li>Absolute Path</li>
+<li>Relative Path</li>
+</ol>
+<h3 id="absolute-path">Absolute Path</h3>
+<p>As the name suggests, an <strong>absolute path</strong> is a representation that will never change for a given file. It starts with the root directory followed by the sub-directory names and that may end with a file or directory name. The sub-directories are delimited by the path separator <code>/</code></p>
+<blockquote>
+<p>The character <strong><code>/</code></strong> has two roles; when it appears at the start of the path, it represents the root directory and when it appears in between, it is called the path separator.</p>
+</blockquote>
+<p><strong>The absolute path name always starts with a <code>/</code></strong> that represents the <em>root directory</em>. For example <code>/usr/bin/awk</code> is the absolute path of the <code>awk</code> command.</p>
+<p><strong>Absolute Path Examples</strong></p>
+<ul>
+<li><code>/home/dbuser/bin/list_old_files.sh</code> : a shell script inside the home directory of an user called <code>dbuser</code></li>
+<li><code>/etc/shells</code> : a system config file that contains the list of available shells</li>
+<li><code>/tmp/tmp.knD5sAulSZ</code> : an ephemeral file created by some process that will be cleaned up once the process is completed or by the operating system</li>
+</ul>
+<h3 id="relative-path">Relative Path</h3>
+<p>Unlike the <em>absolute path</em> that is always same for any given file, the <strong>relative path</strong> will not be the same. The value of relative path of a given file is determined based on the current working directory the user is in or the command is running from.</p>
+<blockquote>
+<p><strong>REMINDER</strong>: The user will be placed in the home directory of the user upon login and the user is always at one directory or another during the login sessions in order to interact with the system.</p>
+</blockquote>
+<p>We can use some short-hand notations in the table given below to construct the relative path.</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/</code></td>
+<td>the <strong>path separator</strong>, that delimits directories in the path</td>
+</tr>
+<tr>
+<td><code>.</code></td>
+<td>reference to the current directory, can be used as a shortcut</td>
+</tr>
+<tr>
+<td><code>..</code></td>
+<td>reference to the parent directory</td>
+</tr>
+<tr>
+<td><code>~</code></td>
+<td>shortcut to the home directory of the current user</td>
+</tr>
+<tr>
+<td><code>~admin</code></td>
+<td>shortcut the home directory of the user called <strong>admin</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Relative Path Examples</strong></p>
+<ul>
+<li><code>data/input/sample.txt</code> : refers to the file <code>sample.txt</code> that is inside <code>input</code> which again is inside <code>data</code> directory of  the current directory (<code>pwd</code>)</li>
+<li><code>../../data</code> : go two level up from the current directory and access the <code>data</code> directory</li>
+<li><code>~/bin/main.sh</code> : refers <code>main.sh</code> that is inside the <code>bin</code> directory of the current user&rsquo;s home directory. This is not exactly a relative path, this one uses one of the path&rsquo;s shortcut available that is <code>~</code> (home directory of the current user)</li>
+<li><code>~dbuser/bin</code> : refers the <code>bin</code> that is under the home directory of user <code>dbuser</code></li>
+</ul>
+<h3 id="absolute-vs-relative-paths">Absolute vs Relative Paths</h3>
+<p>Using the below tree structure3, let us see few examples of absolute and relative paths of few files and directories listed here.</p>
+<p><img src="/Users/bosem9/trng/slides/revealjs/base/img/7b_paths.png" alt=""></p>
+<p>Let us say the current location of the user in the shell is <strong><code>/home/admin</code></strong>. The result we get when we run the <code>pwd</code> command. For the sake of demo, we have kept all directory and file names unique.</p>
+<table>
+<thead>
+<tr>
+<th>To access</th>
+<th>Absolute Path</th>
+<th>Relative Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bin</code></td>
+<td><code>/home/admin/bin</code></td>
+<td><code>bin</code></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>~/bin</code></td>
+</tr>
+<tr>
+<td><code>in</code></td>
+<td><code>/home/admin/data/in</code></td>
+<td><code>data/in</code></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>~/data/in</code></td>
+</tr>
+<tr>
+<td><code>mysqld.log</code></td>
+<td><code>/home/dba/log/mysqld.log</code></td>
+<td><code>../dba/log/mysqld.log</code></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>~dba/log/mysqld.log</code></td>
+</tr>
+<tr>
+<td><code>proj</code></td>
+<td><code>/proj</code></td>
+<td><code>../../proj</code></td>
+</tr>
+<tr>
+<td><code>scores.dat</code></td>
+<td><code>/home/admin/data/out/scores.dat</code></td>
+<td><code>data/out/scores.dat</code></td>
+</tr>
+</tbody>
+</table>
+<p>Both type of path&rsquo;s have their own pros and cons. Here is a brief summary</p>
+<table>
+<thead>
+<tr>
+<th>Absolute Path</th>
+<th>Relative Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Starts with the root directory <code>/</code></td>
+<td>starts with a directory name or some shortcuts like <code>..</code>, <code>.</code>. <strong>never</strong> starts with the <code>/</code> that is the root directory</td>
+</tr>
+<tr>
+<td>Always remains the same</td>
+<td>Changes based on the current directory</td>
+</tr>
+<tr>
+<td>no ambiguity</td>
+<td>works best in environments that follows standard directory structure</td>
+</tr>
+<tr>
+<td>may be longer</td>
+<td>may be shorter than the corresponding absolute path</td>
+</tr>
+</tbody>
+</table>
+<h2 id="file-system-commands-part-i">File System Commands: Part I</h2>
+<hr>
+<p>This section covers commands that are used to create files and perform operations on these files, such as access, copy, move, delete etc.. Here is the list of commands we will deal with examples</p>
+<blockquote>
+<p>In this chapter, we will look at a set of File System commands and in the following chapter, we will discuss wildcards and another set of commands</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>mkdir</code></td>
+<td>create directory</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>cd</code></td>
+<td>change directory</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>rmdir</code></td>
+<td>remove empty directories only</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>touch</code></td>
+<td>create an empty file if it doesn&rsquo;t exists</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>file</code></td>
+<td>determine file type</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>ln</code></td>
+<td>create link to an existing file; <strong>hard</strong> or <strong>soft</strong> link</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>tree</code></td>
+<td>list a directory contents in a tree like format</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mkdir--create-directories"><code>mkdir</code> : create directories</h3>
+<p>The <code>mkdir</code> (<strong>m</strong>a<strong>k</strong>e <strong>dir</strong>ectory) command accepts a path as an argument and creates the innermost directory name in the path by default. It errors out if the directory already exists or if some intermediate directories in the path does not exist already.</p>
+<p><strong>Commonly used options</strong></p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-v</code></td>
+<td>enable verbose mode.</td>
+</tr>
+<tr>
+<td></td>
+<td>displays a message when the directory is created successfully.</td>
+</tr>
+<tr>
+<td></td>
+<td>Same as <code>--verbose</code></td>
+</tr>
+<tr>
+<td><code>-p</code></td>
+<td>creates intermediate directories in the path, if not exist.</td>
+</tr>
+<tr>
+<td></td>
+<td>Same as <code>--parents</code></td>
+</tr>
+<tr>
+<td><code>-m MODE</code></td>
+<td>override default permission using an <em>octal</em> string. More on this later.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Create one or more directories</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># display current directory</span>
+$ <span style="color:#8be9fd;font-style:italic">pwd</span>
+/home/mbose/demos/hfs/dir
+
+<span style="color:#6272a4"># list files and directories at cwd</span>
+$ ls
+
+<span style="color:#6272a4"># mkdir: no flags, creates directory, no messages</span>
+$ mkdir 
+$ ls
+data
+
+<span style="color:#6272a4"># option: -v or --verbose - display dir creation message</span>
+$ mkdir -v data/input
+mkdir: created directory <span style="color:#f1fa8c">&#39;data/input&#39;</span>
+$ ls data
+input
+
+<span style="color:#6272a4"># mkdir: create multiple dirs at same level</span>
+$ mkdir -v bin etc log
+mkdir: created directory <span style="color:#f1fa8c">&#39;bin&#39;</span>
+mkdir: created directory <span style="color:#f1fa8c">&#39;etc&#39;</span>
+mkdir: created directory <span style="color:#f1fa8c">&#39;log&#39;</span>
+MK@gshell dir $ ls
+bin  data  etc  log
+</code></pre></div><p><strong>Create parent directories as needed</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># mkdir: errors out if sub-directories do not exist</span>
+$ mkdir config/db
+mkdir: cannot create directory ‘config/db’: No such file or directory
+
+<span style="color:#6272a4"># option: -p or --parents: creates sub-directories as needed </span>
+$ mkdir --parents --verbose config/db
+mkdir: created directory <span style="color:#f1fa8c">&#39;config&#39;</span>
+mkdir: created directory <span style="color:#f1fa8c">&#39;config/db&#39;</span>
+</code></pre></div><h3 id="cd--change-directory"><code>cd</code> : change directory</h3>
+<p>When an user logs in, the first default directory (s)he will be places is the user&rsquo;s home directory <code>/home/userid</code>. In order to work in the shell, the user has to move from one directory to another frequently. The <code>cd</code> command is used to change user&rsquo;s current directory.</p>
+<p>The <code>cd</code> command accepts one argument that is a path (<em>relative or absolute</em>) of a directory. If no arguments are provided, then <code>cd</code> uses the current user&rsquo;s home directory as default argument.</p>
+<p><strong>Note</strong>: The <code>-</code> has a special meaning for <code>cd</code>. It will substitute the previous working directory and executing the <code>cd -</code> command will take the user back to the previous working directory. Executing <code>cd -</code> consecutively mimics the <code>Alt + Tab</code> like operation of Windows environment. The <code>cd -</code> will display the directory name it is going to switch</p>
+<blockquote>
+<p><code>cd</code> errors out if the directory provided as argument does not exists or it exists but it is not a file. If the user does not have permission to access a valid directory, it would cause an error</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#8be9fd;font-style:italic">pwd</span>
+/home/mbose/trainings/demos/hfs/dir
+
+<span style="color:#6272a4"># cd: defaults to user&#39;s home dir</span>
+$ <span style="color:#8be9fd;font-style:italic">cd</span>
+$ <span style="color:#8be9fd;font-style:italic">pwd</span>
+/home/mbose
+
+<span style="color:#6272a4"># cd: with argument</span>
+$ <span style="color:#8be9fd;font-style:italic">cd</span> data/input
+$ <span style="color:#8be9fd;font-style:italic">pwd</span>
+/home/mbose/demos/hfs/dir/data/input
+
+<span style="color:#6272a4"># cd - : changes back to previous working directory</span>
+$ <span style="color:#8be9fd;font-style:italic">cd</span> -
+/home/mbose/trainings/demos/hfs/dir
+$ <span style="color:#8be9fd;font-style:italic">pwd</span>
+/home/mbose/trainings/demos/hfs/dir
+</code></pre></div><p><strong>Errors</strong>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
+bin  config  data  etc  log  sample.txt
+
+<span style="color:#6272a4"># cd: directory does not exist</span>
+$ <span style="color:#8be9fd;font-style:italic">cd</span> temp
+-bash: cd: temp: No such file or directory
+
+<span style="color:#6272a4"># cd: not a directory</span>
+$ <span style="color:#8be9fd;font-style:italic">cd</span> sample.txt
+-bash: cd: sample.txt: Not a directory
+
+<span style="color:#6272a4"># cd: inadequate permission</span>
+$ <span style="color:#8be9fd;font-style:italic">cd</span> etc/
+-bash: cd: etc/: Permission denied
+</code></pre></div><h3 id="rmdir--remove-empty-directories-only"><code>rmdir</code> : remove &ldquo;empty&rdquo; directories ONLY</h3>
+<p>The <code>rmdir</code> command is used to delete directories that are empty. It accepts If there are files or other directories then we need to use the <code>rm</code> command that will be discussed later in this chapter.</p>
+<p>The <code>rmdir</code> also supports the <code>-p</code> and <code>-v</code>; parents and verbose options like the <code>mkdir</code> command. The <code>-p</code> option takes a path and deletes the innermost directory first and traverse back and delete as long as the current directory it is trying to delete is empty</p>
+<p><strong>Examples: Delete empty directories</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
+bin  config  data  etc  log
+
+<span style="color:#6272a4"># rmdir: no option, silently deletes dir, if empty</span>
+$ rmdir bin
+$ ls
+config  data  etc  log
+
+<span style="color:#6272a4"># rmdir -v: display a message about the dir being deleted</span>
+$ rmdir -v etc
+rmdir: removing directory, <span style="color:#f1fa8c">&#39;etc&#39;</span>
+$ ls
+config  data  log  
+
+<span style="color:#6272a4"># we can delete multiple directories at the same time</span>
+$ mkdir temp
+$ ls
+config  data  log  temp
+$ rmdir -v temp log
+rmdir: removing directory, <span style="color:#f1fa8c">&#39;temp&#39;</span>
+rmdir: removing directory, <span style="color:#f1fa8c">&#39;log&#39;</span>
+$ ls
+config  data
+</code></pre></div><p><strong>Errors</strong>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># invalid dir: not exists</span>
+$ rmdir backup
+rmdir: failed to remove <span style="color:#f1fa8c">&#39;backup&#39;</span>: No such file or directory
+
+<span style="color:#6272a4"># argument is a file</span>
+$  rmdir sample.txt
+rmdir: failed to remove <span style="color:#f1fa8c">&#39;sample.txt&#39;</span>: Not a directory
+
+<span style="color:#6272a4"># insufficient permission; created by root user</span>
+$ rmdir etc
+rmdir: failed to remove <span style="color:#f1fa8c">&#39;etc&#39;</span>: Operation not permitted
+</code></pre></div><h3 id="touch--create-empty-files"><code>touch</code> : create empty files</h3>
+<p>The <code>touch</code> command can be used to create an empty file, if it does not exists.  It changes the file&rsquo;s access and modification timestamps, if the file exists. This command is an useful utility for beginners to create files and play around with commands, at the same time it is powerful enough to be used to trigger events by changing the access / modified timestamps. The files with updated timestamps will be picked up by <strong>file listener</strong> events and services</p>
+<blockquote>
+<p>If a file name starts with a dot <code>.</code>, it will not be visible automatically when we list files. These files are called <strong>hidden files</strong> or <strong>dotfiles</strong> and these need special options to be displayed</p>
+</blockquote>
+<p>|Options|Description|
+| <code>-a</code> | change only the access time, do not change modified time |
+| <code>-a</code> | change only the modified time, do not change access time |
+| <code>-d</code> | uses the argument instead of current time; <code>--data=STRING</code> |
+| <code>-t</code> | accepts a timestamp and use it as current time|</p>
+<blockquote>
+<p>We will do a demo on <code>-d</code> and <code>-t</code> along with the <code>ls</code> command</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
+config    data
+
+$ touch sample.txt sample.csv
+$ ls
+config  data  sample.csv  sample.txt
+</code></pre></div><h3 id="file--determine-file-type"><code>file</code> : determine file type</h3>
+<p>The <code>file</code> command accepts a file as an argument and tries to determine the type of file by looking at various features like known file extensions, checking file stats for emptiness, character checks for ASCII or binary format etc.. The command prints the type of the first passed test. If it cannot determine anything, it simple prints <strong>data</strong></p>
+<p><strong>Create sample files and directories for demo</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir temp
+$ file temp
+temp: directory
+
+$ touch sample.txt
+$ file sample.txt
+sample.txt: empty
+
+<span style="color:#6272a4"># an existing text file</span>
+$ file /etc/shells
+/etc/shells: ASCII text
+
+<span style="color:#6272a4"># an executable</span>
+$ file /usr/bin/perl
+/usr/bin/perl: ELF 64-bit LSB pie executable, x86-64, version <span style="color:#bd93f9">1</span>
+
+<span style="color:#6272a4"># compressed zip file</span>
+$ file backup.zip
+backup.zip: Zip archive data, at least v1.0 to extract
+
+<span style="color:#6272a4"># compressed gzip file</span>
+$ file tarball.tgz
+tarball.tgz: gzip compressed data, last modified: Fri Jul  <span style="color:#bd93f9">9</span> 13:44:48 2021, from Unix, original size <span style="color:#bd93f9">10240</span>
+
+<span style="color:#6272a4"># contains random ascii char from /dev/urandom </span>
+$ file random.bin
+random.bin: data
+</code></pre></div><h3 id="ln--create-links-or-shortcuts"><code>ln</code> : create links or shortcuts</h3>
+<p>The <code>ln</code> command is used to create shortcut to an existing file or directory. There are two type of links we can create; <strong>hard links</strong> and <strong>soft</strong> or <strong>symbolic links</strong></p>
+<p>A <strong>hard link</strong> is an additional name for an existing file. If the original file is deleted, we can still access the data using the hard link. We cannot create hard links for directories. Both files will be pointing to the same <strong>inode</strong>, an unique number assigned to each file created in the system.</p>
+<p>A <strong>soft link</strong> like the shortcut in the Windows environment. We can create a soft or symbolic link for both files and directories. If the original file is deleted, the symbolic link will remain broken and accessing that link will cause error</p>
+<p>Links are useful in many ways; we can create a short name as symbolic link to frequently used files and directories. For applications, that need to access the latest file from a given set of files with the date in it, the process that creates these files can create a symbolic link and the application can use the link instead of the actual latest file.</p>
+<table>
+<thead>
+<tr>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-v</code></td>
+<td>enable verbose mode</td>
+</tr>
+<tr>
+<td><code>-s</code></td>
+<td>create symbolic link, hard link will be created by default</td>
+</tr>
+<tr>
+<td><code>-t DIR</code></td>
+<td>directory name on which the link should be created</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
+config date
+
+ regular files
+touch weblog_20210705.log weblog_20210706.log
+
+<span style="color:#6272a4"># create symbolic link</span>
+ln -s weblog_20210706.log weblog.log
+$ file weblog.log
+weblog.log: symbolic link to weblog_20210706.log
+
+<span style="color:#6272a4"># create hard link: both original and link has same inode</span>
+$ ln weblog_20210705.log weblog
+<span style="color:#6272a4"># ls -1i : displays file and its inode, one per line</span>
+<span style="color:#6272a4"># **Note**: both files have same inode 133719</span>
+$ ls -1i weblog weblog_20210706.log
+<span style="color:#bd93f9">133719</span> weblog
+<span style="color:#bd93f9">133719</span> weblog_20210706.log
+</code></pre></div><h3 id="tree--display-contents-of-directory-recursively"><code>tree</code> : display contents of directory recursively</h3>
+<p>The tree command displays all the sub-directories and files under the current directory (default). We can explicitly pass a directory as argument</p>
+<table>
+<thead>
+<tr>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-a</code></td>
+<td>print all files, including hidden files</td>
+</tr>
+<tr>
+<td><code>-d</code></td>
+<td>print directories only, discard files</td>
+</tr>
+<tr>
+<td><code>-L N</code></td>
+<td>print only <code>N</code> sub-levels of nested directories</td>
+</tr>
+<tr>
+<td><code>-f</code></td>
+<td>display full relative path for each file and directory</td>
+</tr>
+<tr>
+<td><code>-o FILE</code></td>
+<td>send output to <code>FILE</code> instead of screen</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The <code>tree</code> command is not installed by default in many OS (google cloud shell) or emulators like <code>cygwin</code>.</p>
+</blockquote>
+<p><strong>Create sample files and directories</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir tree_demo
+$ <span style="color:#8be9fd;font-style:italic">cd</span> tree_demo
+$ mkdir -p processor/intel/i3/<span style="color:#ff79c6">{</span>bin,data,etc,log<span style="color:#ff79c6">}</span>
+$ mkdir -p processor/intel/i3/data/<span style="color:#ff79c6">{</span>in,out<span style="color:#ff79c6">}</span>put
+$ touch processor/intel/i3/log/cycled.log
+$ touch processor/intel/i3/data/run_1a.dat
+$ touch processor/intel/i3/data/input/source.dat
+$ touch processor/intel/i3/data/output/<span style="color:#ff79c6">{</span>xa,xb,xc<span style="color:#ff79c6">}</span>.dat
+
+$ touch processor/intel/i3/bin/.config
+</code></pre></div><p><strong><code>tree</code> demo</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tree 
+.
+└── processor
+    └── intel
+        └── i3
+            ├── bin
+            │   └── main.sh
+            ├── data
+            │   ├── input
+            │   │   └── source.dat
+            │   ├── output
+            │   │   ├── xa.dat
+            │   │   ├── xb.dat
+            │   │   └── xc.dat
+            │   └── run_1a.dat
+            ├── etc
+            └── log
+                └── cycled.log
+</code></pre></div><p><strong>Display directories only, discard files</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tree -d
+.
+└── processor
+    └── intel
+        └── i3
+            ├── bin
+            ├── data
+            │   ├── input
+            │   └── output
+            ├── etc
+            └── log
+</code></pre></div><p><strong>Limit levels of sub-directories</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tree -d -L <span style="color:#bd93f9">3</span>
+.
+└── processor
+    └── intel
+        └── i3
+</code></pre></div><p><strong>Display Hidden Files</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># display hidden file .config</span>
+$ tree -a processor/intel/i3/bin
+processor/intel/i3/bin
+├── .config
+└── main.sh
+</code></pre></div><p><strong>Save output in file instead of display on screen</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tree -d -L <span style="color:#bd93f9">3</span> -o tree.out
+<span style="color:#6272a4"># display file using `cat` command</span>
+$ cat tree.out
+.
+└── processor
+    └── intel
+        └── i3
+</code></pre></div><p><em>&hellip;to be continued in part 2</em></p>
+
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+            
+                <a class="nav nav-prev" href="/part-1/p1-ch2/" title="1.2: Command Syntax"><i class="fa fa-chevron-left"></i></a>
+            
+            
+                <a class="nav nav-next" href="/part-1/p1-ch3b/" title="1.4: File System: Wildcards"><i class="fa fa-chevron-right"></i></a>
+            
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1632053186"></script>
+    <script src="/js/perfect-scrollbar.min.js?1632053186"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1632053186"></script>
+    <script src="/js/jquery.sticky.js?1632053186"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1632053186"></script>
+    <script src="/js/featherlight.min.js?1632053186"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1632053186"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1632053186"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1632053186"></script>
+    
+
+  </body>
+</html>
+

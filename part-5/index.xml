@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Appendix on My New Hugo Site</title>
+    <link>http://example.org/part-5/</link>
+    <description>Recent content in Appendix on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://example.org/part-5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Commands Summary</title>
+      <link>http://example.org/part-5/p5-ch1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/part-5/p5-ch1/</guid>
+      <description>Appendix: A Introduction In this chapter, we will group comments by functionality and provide an one-liner explanation to each command. This serves as a reference to the commands we learnt earlier
+ This is a simple list of commands with brief explanation. Refer the manual pages of the corresponding commands using man CMD from the shell or online documentation for more information
+  Types of Commands Here we have classified the commands based on the broader functionality these commands provide.</description>
+    </item>
+    
+    <item>
+      <title>Special Characters</title>
+      <link>http://example.org/part-5/p5-ch2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/part-5/p5-ch2/</guid>
+      <description>Appendix: B Shell Special Characters    Character Description     # comment   \ escape special meaning of the special character and to code escape sequences like tab \t, newline \n, etc&amp;hellip;   \n marks end of a command and shell start executing the command(s)   space delimiter of command, options and arguments in a command sequence   \t same as the space / blank character   $ prefix used in the variable names to get the values referenced by the variables   !</description>
+    </item>
+    
+  </channel>
+</rss>

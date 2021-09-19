@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>1.6: IO Redirection :: My New Hugo Site</title>
+
+    
+    <link href="/css/nucleus.css?1632053186" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1632053186" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1632053186" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1632053186" rel="stylesheet">
+    <link href="/css/auto-complete.css?1632053186" rel="stylesheet">
+    <link href="/css/theme.css?1632053186" rel="stylesheet">
+    <link href="/css/tabs.css?1632053186" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1632053186" rel="stylesheet">
+    
+    <link href="/css/theme-blue.css?1632053186" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1632053186"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/part-1/p1-ch5/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo"
+  style="
+    color: white;
+    font-family: 'Novacento Sans Wide', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -2px;
+  "
+  href="/">
+  <b style="font-size: 120%;">MK</b> &nbsp; <i class="fab fa-linux"></i> &nbsp; Linux  
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1632053186"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1632053186"></script>
+<script type="text/javascript">
+    
+    
+    var index_url="/index.json";
+    var root_url="/";
+    var baseUri=root_url.replace(/\/$/, '');
+</script>
+<script type="text/javascript" src="/js/search.js?1632053186"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-0/" title="Setting the Stage" class="dd-item">
+        <a href="/part-0/">
+          <b>0. </b>
+Setting the Stage
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-0/p0-ch1/" title="Acknowledgement" class="dd-item">
+        <a href="/part-0/p0-ch1/">
+          
+Acknowledgement
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-1/" title="Getting Started" class="dd-item parent">
+        <a href="/part-1/">
+          <b>1. </b>
+Getting Started
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch1/" title="1.1: Introduction" class="dd-item">
+        <a href="/part-1/p1-ch1/">
+          
+1.1: Introduction
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch2/" title="1.2: Command Syntax" class="dd-item">
+        <a href="/part-1/p1-ch2/">
+          
+Command Syntax
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch3a/" title="1.3: File System: Basics" class="dd-item">
+        <a href="/part-1/p1-ch3a/">
+          
+1.3: File System: Basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch3b/" title="1.4: File System: Wildcards" class="dd-item">
+        <a href="/part-1/p1-ch3b/">
+          
+1.4: File System: Wildcards
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch4/" title="1.5: Permission" class="dd-item">
+        <a href="/part-1/p1-ch4/">
+          
+1.5: Permission
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch5/" title="1.6: IO Redirection" class="dd-item active">
+        <a href="/part-1/p1-ch5/">
+          
+1.6: IO Redirection
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch6/" title="1.7: Viewing Files" class="dd-item">
+        <a href="/part-1/p1-ch6/">
+          
+1.7: Viewing Files
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch7/" title="1.8: Data Manipulation" class="dd-item">
+        <a href="/part-1/p1-ch7/">
+          
+1.8: Data Manipulation
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-1/p1-ch8/" title="1.9: Running Commands" class="dd-item">
+        <a href="/part-1/p1-ch8/">
+          
+1.9: Running Commands
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-2/" title="Text Processing" class="dd-item">
+        <a href="/part-2/">
+          <b>2. </b>
+Text Processing
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch1/" title="2.1: Regular Expressions" class="dd-item">
+        <a href="/part-2/p2-ch1/">
+          
+2.1: Regular Expressions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch2/" title="2.2: Vi Editor" class="dd-item">
+        <a href="/part-2/p2-ch2/">
+          
+2.2: Vi Editor
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch3/" title="2.3: Searching Text" class="dd-item">
+        <a href="/part-2/p2-ch3/">
+          
+2.3: Searching Text
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch4/" title="2.4: Text Substitution" class="dd-item">
+        <a href="/part-2/p2-ch4/">
+          
+2.4: Text Substitution
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-2/p2-ch5/" title="2.4: AWK programming Language" class="dd-item">
+        <a href="/part-2/p2-ch5/">
+          
+2.4: AWK programming Language
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-3/" title="Beyond the Basics" class="dd-item">
+        <a href="/part-3/">
+          <b>3. </b>
+Beyond the Basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch1/" title="3.1: Process Management" class="dd-item">
+        <a href="/part-3/p3-ch1/">
+          
+3.1: Process Management
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch2/" title="3.2: Scheduling Jobs" class="dd-item">
+        <a href="/part-3/p3-ch2/">
+          
+3.2: Scheduling Jobs
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch4/" title="3.3: Remote Access Commands" class="dd-item">
+        <a href="/part-3/p3-ch4/">
+          
+3.3: Remote Access Commands
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch3/" title="3.4: Archival commands" class="dd-item">
+        <a href="/part-3/p3-ch3/">
+          
+3.4: Archival commands
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch5/" title="3.5: The &#34;find&#34; Command" class="dd-item">
+        <a href="/part-3/p3-ch5/">
+          
+3.5: The &#34;find&#34; Command
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-3/p3-ch6/" title="3.6: The &#34;xargs&#34; Command" class="dd-item">
+        <a href="/part-3/p3-ch6/">
+          
+3.6: The &#34;xargs&#34; Command
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-4/" title="Shell Scripting" class="dd-item">
+        <a href="/part-4/">
+          <b>4. </b>
+Shell Scripting
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-4/p4-ch1/" title="4.1: Introduction to Shell Scripts" class="dd-item">
+        <a href="/part-4/p4-ch1/">
+          
+4.1: Introduction to Shell Scripts
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/part-5/" title="Appendix" class="dd-item">
+        <a href="/part-5/">
+          <b>9. </b>
+Appendix
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-5/p5-ch1/" title="Commands Summary" class="dd-item">
+        <a href="/part-5/p5-ch1/">
+          
+Commands Summary
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/part-5/p5-ch2/" title="Special Characters" class="dd-item">
+        <a href="/part-5/p5-ch2/">
+          
+Special Characters
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+            <li>
+                <a class="padding" href="http://example.org/tags"><i class='fas fa-tags'></i> Tags</a>
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Linux Basics</a> > <a href='/part-1/'>Getting Started</a> > 1.6: IO Redirection
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#chapter-6">Chapter 6</a></li>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#how-it-works-">How it works ?</a></li>
+        <li><a href="#another-example">Another Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#redirection">Redirection</a>
+      <ul>
+        <li><a href="#standard-input-">Standard Input: <code>&lt;</code></a></li>
+        <li><a href="#standard-output--and-">Standard Output: <code>&gt;</code> and <code>&gt;&gt;</code></a></li>
+        <li><a href="#standard-error-2">Standard Error <code>2&gt;</code></a></li>
+        <li><a href="#what-if-we-do-not-need-the-error-messages-">What if we do not need the error messages ?</a></li>
+        <li><a href="#stdout-and-stderr-to-same-file"><code>stdout</code> and <code>stderr</code> to same file</a></li>
+        <li><a href="#emptying-an-existing-file">Emptying an existing File</a></li>
+      </ul>
+    </li>
+    <li><a href="#pipes-">Pipes <code>|</code></a>
+      <ul>
+        <li><a href="#use-case-1-get-dd-mmmm-yyyy-from-the-date-command">Use case 1: Get <code>DD MMMM YYYY</code> from the <code>date</code> command</a></li>
+        <li><a href="#use-case-2-get-record-16-20-from-a-file-and-add-line-numbers">Use case 2: Get record 16-20 from a file and add line numbers</a></li>
+        <li><a href="#use-case-3-get-first-10-records-excluding-header">Use case 3: Get first 10 records excluding header</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-tee-command--and--">The <code>tee</code> command: <code>|</code> and  <code>&gt;</code></a></li>
+    <li><a href="#points-to-remember">Points to remember</a>
+      <ul>
+        <li><a href="#endnote">Endnote</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              1.6: IO Redirection
+            </h1>
+          
+
+        
+
+
+<h3 id="chapter-6">Chapter 6</h3>
+<h3 id="introduction">Introduction</h3>
+<p>So far, we ran commands that displayed text on screen, be it errors or intended output. In cases like the <code>cp -i</code> command, the system expects user input to continue the execution. The system uses the keyboard as <strong>Standard Input</strong> and the monitor as <strong>Standard Output</strong> and <strong>Standard Error</strong>.</p>
+<p>Let us look into one of the most powerful features of Unix called <strong>IO Redirection</strong>. It enables us to use files instead of the keyboard and monitor as standard input and output. We will discuss the usage of <strong>pipes</strong> - <strong><code>|</code></strong> to pass the output of one command as input to another. Using the <strong>pipes</strong>, we can build a command pipeline to solve complex problems using several commands that run sequentially.</p>
+<blockquote>
+<p>Using the IO redirection and the pipes in particular, we can bring synergy by using  multiple commands together where the end result is greater than the sum of the parts (commands).</p>
+</blockquote>
+<p><img src="/images/05a_io_redirection.png" alt=""></p>
+<h3 id="how-it-works-">How it works ?</h3>
+<p>Many commands use <strong>stdin</strong> if no arguments are provided. For example, the <code>cat</code> command that display the contents of a file, uses the <em>stdin</em> if no file its provided. It waits for the user to type something, when the user press the enter key, displays the content and this keeps going until <code>cat</code> receives <code>CTRL-D</code> key.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat
+Hello, World
+Hello, World
+Good Bye           
+Good Bye
+CTRL-D
+</code></pre></div><h3 id="another-example">Another Example</h3>
+<p>Let us consider the following scenario; We have a comma-delimited student data file that has students grade and scores. One of the requirement is to get the counts of students who received greater that 50 score points and group the count by grade(3rd, 4th, 8th grades&hellip;). We can write a program or we can use the following set of commands</p>
+<blockquote>
+<p><strong>Note</strong>: The below command pipeline is just for demonstration. We will look into the commands used in the demo later.</p>
+</blockquote>
+<ol>
+<li><code>awk</code>: extract all records that has score greater than 50.</li>
+<li><code>awk</code>: extract just the <em>grade</em> alone.</li>
+<li><code>sort</code>: sort output from awk by grade.</li>
+<li><code>uniq -c</code>: get count by grade; displays count followed by grade.</li>
+<li><code>awk</code>: reformat output by swapping counts and grades.</li>
+</ol>
+<p>Here is some sample records</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># studentId,lastName,firstName,gender,grade,score</span>
+$ tail student.csv
+A0000078,Clark,Joyce,F,04,92
+A0000079,Stevenson,Laura,F,06,90
+A0000080,Jackson,Melissa,F,07,88
+A0000081,Rogers,Matthew,M,06,90
+</code></pre></div><p>Here is how the command will look</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ awk -F, <span style="color:#f1fa8c">&#39;$NF &gt;= 50 {print $5}&#39;</span> student.csv | sort | uniq -c | awk <span style="color:#f1fa8c">&#39;{print $2, $1}&#39;</span>
+<span style="color:#bd93f9">03</span> <span style="color:#bd93f9">2</span>
+<span style="color:#bd93f9">04</span> <span style="color:#bd93f9">3</span>
+<span style="color:#bd93f9">05</span> <span style="color:#bd93f9">4</span>
+<span style="color:#bd93f9">06</span> <span style="color:#bd93f9">5</span>
+<span style="color:#bd93f9">07</span> <span style="color:#bd93f9">3</span>
+<span style="color:#bd93f9">08</span> <span style="color:#bd93f9">2</span>
+
+<span style="color:#6272a4"># sum up the counts above, run awk with `$NF &lt; 50` to verify</span>
+$ wc -l student.csv
+  <span style="color:#bd93f9">23</span> student.csv
+</code></pre></div><p>Another way to solve this by writing a program. Let us create a  python script and compare the command-line solution against it</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#bd93f9">1</span> <span style="color:#6272a4"># name: counts.py    </span>
+  <span style="color:#bd93f9">2</span> <span style="color:#6272a4"># purpose:           </span>
+  <span style="color:#bd93f9">3</span> <span style="color:#6272a4">#   reads &#39;student.csv&#39;, filter the records by score &gt;=50</span>
+  <span style="color:#bd93f9">4</span> <span style="color:#6272a4">#   accumulate the counts by grade and display the results</span>
+  <span style="color:#bd93f9">5</span>                      
+  <span style="color:#bd93f9">6</span> stats <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">dict</span>()       
+  <span style="color:#bd93f9">7</span> <span style="color:#ff79c6">with</span> <span style="color:#8be9fd;font-style:italic">open</span>(<span style="color:#f1fa8c">&#39;student.csv&#39;</span>) <span style="color:#ff79c6">as</span> fh:
+  <span style="color:#bd93f9">8</span>     <span style="color:#ff79c6">for</span> rec <span style="color:#ff79c6">in</span> fh:   
+  <span style="color:#bd93f9">9</span>         data <span style="color:#ff79c6">=</span> rec<span style="color:#ff79c6">.</span>strip()<span style="color:#ff79c6">.</span>split(<span style="color:#f1fa8c">&#34;,&#34;</span>)
+ <span style="color:#bd93f9">10</span>         score <span style="color:#ff79c6">=</span> data[<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>]
+ <span style="color:#bd93f9">11</span>         score <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(score)
+ <span style="color:#bd93f9">12</span>         <span style="color:#ff79c6">if</span> score <span style="color:#ff79c6">&lt;</span> <span style="color:#bd93f9">50</span>:
+ <span style="color:#bd93f9">13</span>             <span style="color:#ff79c6">continue</span>     
+ <span style="color:#bd93f9">14</span>         grade <span style="color:#ff79c6">=</span> data[<span style="color:#ff79c6">-</span><span style="color:#bd93f9">2</span>]
+ <span style="color:#bd93f9">15</span>         stats[grade] <span style="color:#ff79c6">=</span> stats<span style="color:#ff79c6">.</span>get(grade, <span style="color:#bd93f9">0</span>) <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>
+ <span style="color:#bd93f9">16</span>                      
+ <span style="color:#bd93f9">17</span> <span style="color:#ff79c6">for</span> grade <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">sorted</span>(stats):
+ <span style="color:#bd93f9">18</span>     <span style="color:#ff79c6">print</span>(f<span style="color:#f1fa8c">&#34;{grade} {stats[grade]}&#34;</span>)     
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python3 counts.py
+<span style="color:#bd93f9">03</span> <span style="color:#bd93f9">2</span>
+<span style="color:#bd93f9">04</span> <span style="color:#bd93f9">3</span>
+<span style="color:#bd93f9">05</span> <span style="color:#bd93f9">4</span>
+<span style="color:#bd93f9">06</span> <span style="color:#bd93f9">5</span>
+<span style="color:#bd93f9">07</span> <span style="color:#bd93f9">3</span>
+<span style="color:#bd93f9">08</span> <span style="color:#bd93f9">2</span>
+</code></pre></div><p>Here is the command sequence we used, It looks pretty small, right?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ awk -F, <span style="color:#f1fa8c">&#39;$NF &gt;= 50 {print $5}&#39;</span> student.csv | sort | uniq -c | awk <span style="color:#f1fa8c">&#39;{print $2, $1}&#39;</span>
+</code></pre></div><p>Using commands and redirection, we can build a quick prototype and validate before developing code.</p>
+<h2 id="redirection">Redirection</h2>
+<p>In Unix, everything is treated as a file. We have seen that keyboard and monitor are used as default <strong>stdin</strong> and <strong>stdout</strong> respectively. Since Unix treats the devices as files, we can substitute files in place of these devices. This is called <strong>IO Redirection</strong>.</p>
+<p>In order to accomplish the redirection, we use special characters to instruct the shell to read/write from files instead of the devices. A file will be coded after the symbols typically.</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;</code></td>
+<td>standard input</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>standard output</td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td>standard output, append mode</td>
+</tr>
+<tr>
+<td><code>2&gt;</code></td>
+<td>standard error</td>
+</tr>
+<tr>
+<td><code>2&gt;&gt;</code></td>
+<td>standard error, append mode</td>
+</tr>
+</tbody>
+</table>
+<p>Here are some additional syntax to redirect both <strong>stdout</strong> and <strong>stderr</strong> into same file.</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&gt; FILE 2&gt;&amp;1</code></td>
+<td>standard output and error to same file</td>
+</tr>
+<tr>
+<td><code>&amp;&gt;</code></td>
+<td>same as <code>2&gt;&amp;1</code>, simplified version in latest versions</td>
+</tr>
+<tr>
+<td><code>&amp;&gt;&gt;</code></td>
+<td>standard output and error to same file, append mode</td>
+</tr>
+<tr>
+<td><code>&gt;&amp;</code></td>
+<td>same as <code>&amp;&gt;</code>, not preferred</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong></p>
+<ul>
+<li><code>&gt; FILE 2&gt;&amp;1</code> works in most of the shells including <code>bash</code></li>
+<li><code>&amp;&gt; &amp;&gt;&gt;</code> are <code>bash</code> specific.</li>
+<li><code>&gt;&amp;</code> is supported in <code>bash</code>, <code>ksh</code>, <code>csh</code> shells</li>
+<li>unlike <code>&amp;&gt;&gt;</code> for append,  <strong><code>&gt;&gt;&amp;</code> throws up syntax error</strong>.</li>
+<li>for bash, it is preferable to use <code>&amp;&gt;</code> or <code>&gt; FILE 2&gt;&amp;1</code></li>
+</ul>
+<p>We will look into these combination later. Let us first discuss <strong>stdin</strong>, <strong>stdout</strong> and <strong>stderr</strong>.</p>
+<h3 id="standard-input-">Standard Input: <code>&lt;</code></h3>
+<p>The commands we have seen so far are not great examples to demonstrate the <strong>stdin</strong> usage. Later in this series, we will discuss  the<code>tr</code> and <code>xargs</code> commands that accepts data from <strong>stdin</strong>. For demo, let us look at how it works using the commands we have seen so far.</p>
+<p>The <code>cat</code> command without any argument, reads from keyboard (<em>stdin</em>). We can pass the contents of a file instead of <strong>stdin</strong> using the <code>&lt;</code> symbol.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat &lt; hello.txt
+Hello World
+
+$ cat hello.txt
+Hello World
+</code></pre></div><p>Though both versions have same effect, the first <code>cat</code>  reads from the standard input and display the contents whereas the second <code>cat</code> opens the file, read it and display the contents.</p>
+<h3 id="standard-output--and-">Standard Output: <code>&gt;</code> and <code>&gt;&gt;</code></h3>
+<p>So far, the commands we ran either finished quietly (<code>mkdir</code>) or displayed the output on the screen (<code>ls</code>). However we may want to store the results for future reference. The <strong>stdout</strong> redirection comes in handy in situations like this.</p>
+<p>We have two ways of redirecting the <em>standard output</em>, write and append mode. We usse <code>&gt;</code> for write and <code>&gt;&gt;</code> for appennd. When we use <code>&gt;</code>, the contents of the file will be overwritten, if the file exists already whereas <code>&gt;&gt;</code> appends the contents to an existing file. In both cases, the file is created if it does not exist.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># output redirected to file_list.txt</span>
+$ ls -1 &gt; file_list.txt
+
+$ cat file_list.txt
+counts.py
+demo.txt
+file_list.txt
+sample.txt
+
+<span style="color:#6272a4"># append contents</span>
+$ <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;List from parent dir&#34;</span> &gt;&gt; file_list.txt
+$ ls -1 ../ &gt;&gt; file_list.txt
+
+$ cat file_list.txt
+counts.py
+demo.txt
+file_list.txt
+sample.txt
+List from parent dir
+files
+hfs
+</code></pre></div><p><strong>Capturing Keyboard Input and Create Files</strong></p>
+<p>The <strong>stdout</strong> is a great way to capture the output of the commands that can be used for future reference. Most importantly, we can create our own simple files to play around learning commands.</p>
+<p>In order to create our own files with complex data, we need to learn how to use the editors like <strong>Vi</strong> or write programs to create the files. However, we can use the <strong>stdout</strong> to capture the input from keyboard and store the contents in a file using the <code>cat &gt; file_name</code> syntax. Once the command iss executed, whatever we type will be captured in the file we provided after <code>&gt;</code> until <code>CTRL-D</code> is pressed. We can use <code>&gt;&gt;</code> instead of <code>&gt;</code> to append the data into an existing file.</p>
+<p>Let us see it in action</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># cat: waits for user to enter data. will be written to names.txt</span>
+<span style="color:#6272a4"># commad exits when CTRL-D is pressed</span>
+$ cat &gt; names.txt
+lastName,FirstName,Score,EndOfRec
+Bell,Isac,75,Z
+Pitt,Dirk,89,Z
+Zavala,Joe,99,Z
+CTRL-D
+
+$ cat names.txt
+lastName,FirstName,Score,EndOfRec
+Bell,Isac,75,Z
+Pitt,Dirk,89,Z
+Zavala,Joe,99,Z
+
+<span style="color:#6272a4"># append some more records</span>
+$ cat &gt;&gt; names.txt
+Smith-Pitt,Lauren,87,Z
+Cabrillo,Juan,89,Z
+CTRL-D
+
+$ cat names.txt
+Bell,Isac,75,Z
+Pitt,Dirk,89,Z
+Zavala,Joe,99,Z
+Smith-Pitt,Lauren,87,Z
+Cabrillo,Juan,89,Z
+</code></pre></div><h3 id="standard-error-2">Standard Error <code>2&gt;</code></h3>
+<p>The <em>standard error</em> or <strong>stderr</strong> is where the commands redirect the <em>error message</em>. These messages also uses screen as default and often we cannot tell whether the message is from <strong>stdout</strong> or <strong>stderr</strong>.</p>
+<p>For example, the <code>mkdir</code> command with <code>-v</code> option displays a message <em>created directory</em> if it is successful and displays an error message <em>cannot create directory</em> if it is not successful. The error is displayed with or without the <code>-v</code> option.</p>
+<p>In the example below, the first message is from <strong>stdout</strong> and the second one is from <strong>stderr</strong>. We may not be able distinguish by just looking at the messages, however if we use the redirection symbols <code>&gt;</code> and <code>2&gt;</code> that corresponds to <em>stdout</em> and <em>stderr</em>, we can see the difference</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir -v data
+mkdir: created directory <span style="color:#f1fa8c">&#39;data&#39;</span>
+
+$ mkdir -v data
+mkdir: cannot create directory ‘data’: File exists
+</code></pre></div><p>Let us redirect the messages.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># setup</span>
+$ mkdir redirection
+$ <span style="color:#8be9fd;font-style:italic">cd</span> redirection
+$ mkdir data temp
+
+$ ls
+data   temp
+
+<span style="color:#6272a4"># redirect stdout</span>
+$ mkdir -v data data/input &gt; mkdir.log
+mkdir: cannot create directory ‘data’: File exists
+
+$ cat mkdir.log
+mkdir: created directory <span style="color:#f1fa8c">&#39;data/input&#39;</span>
+</code></pre></div><p>Here <code>mkdir -v data</code> failed since there is a <code>data</code> directory already and it was not captured in the <code>&gt; mkdir.log</code> because <code>&gt;</code> is to redirect <strong>stdout</strong> only and the error message still used the screen as <strong>stderr</strong>. The <code>mkdir.log</code> has the success message about the creation of <code>input</code> directory inside <code>data</code>.</p>
+<p>Now we can use the <code>2&gt;</code> to capture <strong>stdout</strong>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># this command produces both error and success messages</span>
+$ mkdir -v data/input data 2&gt; mkdir.err
+mkdir: created directory <span style="color:#f1fa8c">&#39;data&#39;</span>
+
+$ cat mkdir.err
+mkdir: cannot create directory ‘data/input’: No such file or directory
+</code></pre></div><p>In the above example, we see that the error message is redirected into the file and success message is redirected to the screen. The simplest way to capture both error and success messages is by coding both <code>&gt;</code> and <code>2&gt;</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># nothing will be displayed for this run</span>
+$ mkdir -v data/input data 2&gt; mkdir.err &gt; mkdir.log
+
+$ cat mkdir.log
+mkdir: created directory <span style="color:#f1fa8c">&#39;data&#39;</span>
+$ cat mkdir.err
+mkdir: cannot create directory ‘data/input’: No such file or directory
+</code></pre></div><h3 id="what-if-we-do-not-need-the-error-messages-">What if we do not need the error messages ?</h3>
+<p>At times, we do not need the error messages to be displayed on screen or captured in files. We can redirect the <em>stderr</em> to a special device file called <code>/dev/null</code> that serves as a <em>trash</em> and data redirected there are gone forever.</p>
+<blockquote>
+<p>The <code>/dev/null</code> is a write only device file that can be used to redirect anything we want to discard forever. It is also called <strong>bit bucket</strong> or <strong>blackhole</strong> of the system. Whatever has been redirected to it is swallowed up never see the light of the day</p>
+</blockquote>
+<p>Redirecting <strong>stderr</strong> to <code>/dev/null</code> is very useful in cases like <code>permission denied</code> errors when we do recursive operations. It is also helpful in discarding expected errors like the one <code>mkdir</code> throws when we try to create a directory that is already there.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># /dev/null: a &#39;character block&#39; device file</span>
+$ ls -l /dev/null
+crw-rw-rw- <span style="color:#bd93f9">1</span> root root 1, <span style="color:#bd93f9">3</span> Jul <span style="color:#bd93f9">16</span> 09:29 /dev/null
+
+$ mkdir -v data
+mkdir: created directory <span style="color:#f1fa8c">&#39;data&#39;</span>
+
+$ mkdir -v data
+mkdir: cannot create directory ‘data/input’: No such file or directory
+
+<span style="color:#6272a4"># error message discarded</span>
+$ mkdir -v data 2&gt; /dev/null
+</code></pre></div><h3 id="stdout-and-stderr-to-same-file"><code>stdout</code> and <code>stderr</code> to same file</h3>
+<p>In the previous sections, we have seen examples to redirect the stdout and stderr using <code>&gt;</code> and <code>2&gt;</code> respectively. What if we want to capture the data from stdout and stderr into the same file ? Can we do it ? One naive way we may logically think of is to use <code>&gt;&gt;</code> and <code>2&gt;&gt;</code> passing the same file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir -v data data/input data/output &gt;&gt; mkdir.log 2&gt;&gt; mkdir.loh
+$ cat mkdir.log
+mkdir: cannot create directory ‘data’: File exists
+mkdir: created directory <span style="color:#f1fa8c">&#39;data/input&#39;</span>
+mkdir: created directory <span style="color:#f1fa8c">&#39;data/output&#39;</span>
+</code></pre></div><p>Though the above example works, the shell provides better ways to deal with this situation. There are there ways we can accomplish this and these are listed in the order of preference.</p>
+<ol>
+<li><code>&gt; FILE 2&gt;&amp;1</code>: Works in most of the shells; <code>bash</code>, <code>ksh</code>, <code>csh</code>. Use this if you need shell portability or if you work on multiple shell types. This syntax means, redirect <code>stdout</code> to <code>FILE</code> and <code>stderr</code> to  <code>&amp;1</code> also know <strong>file descriptor 1</strong> that points to <code>stdout</code>. Since <code>stdout</code> already points to <code>FILE</code>, data from both streams end up in the same file.</li>
+<li><code>&amp;&gt;</code> or <code>&amp;&gt;&gt;</code>: This is a short-hand notation of <code>&gt; FILE 2&gt;&amp;1</code> that works only on <code>bash</code> and <code>zsh</code> shells</li>
+<li><code>&gt;&amp;</code> is not a preferred syntax and it works the same way as <code>&amp;&gt;</code> however we cannot perform append; <code>&gt;&gt;&amp;</code> throws syntax errors.</li>
+</ol>
+<p>Let us look at this in action. In each cases we will remove the <code>input</code> and <code>output</code> directories before running the <code>mkdir</code> command.</p>
+<p><strong>using <code>&gt; FILE 2&gt;&amp;1</code></strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir -v data data/input data/output  &gt; mkdir.log  2&gt;&amp;<span style="color:#bd93f9">1</span>
+$ cat mkdir.log
+mkdir: cannot create directory ‘data’: File exists
+mkdir: created directory <span style="color:#f1fa8c">&#39;data/input&#39;</span>
+mkdir: created directory <span style="color:#f1fa8c">&#39;data/output&#39;</span>
+</code></pre></div><p><strong>using <code>&amp;&gt; FILE</code></strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir -v data data/input data/output  &amp;&gt; mkdir.log 
+$ cat mkdir.log
+mkdir: cannot create directory ‘data’: File exists
+mkdir: created directory <span style="color:#f1fa8c">&#39;data/input&#39;</span>
+mkdir: created directory <span style="color:#f1fa8c">&#39;data/output&#39;</span>
+</code></pre></div><p><strong>using <code>&gt;&amp; FILE</code></strong></p>
+<p>This is not a preferable way of redirecting standard output and error into a same file. This is covered for the sake of completeness.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir -v data data/input data/output  &gt;&amp; mkdir.log 
+$ cat mkdir.log
+mkdir: cannot create directory ‘data’: File exists
+mkdir: created directory <span style="color:#f1fa8c">&#39;data/input&#39;</span>
+mkdir: created directory <span style="color:#f1fa8c">&#39;data/output&#39;</span>
+</code></pre></div><h3 id="emptying-an-existing-file">Emptying an existing File</h3>
+<p>One of the simplest ways to discard the contents of an existing file and leave it empty is by simply using one of the following syntax using <em>stdout</em> redirection</p>
+<ul>
+<li><code>&gt; FILE</code>: empties the file by truncating to zero byte length. may not work in all shells.<br>
+<code>:&gt; FILE</code> syntax; same as <code>&gt; FILE</code> but works on all shells. If the file is not present then it creates an empty file</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;hello&#34;</span> &gt; hello.txt
+
+<span style="color:#6272a4"># 6 bytes long file</span>
+$ ls -l hello.txt
+-rw-r--r-- <span style="color:#bd93f9">1</span> mbose admin <span style="color:#bd93f9">6</span> Jul <span style="color:#bd93f9">16</span> 10:10 hello.txt
+
+$ &gt; hello.txt
+$ wc -l hello.txt
+<span style="color:#bd93f9">0</span>   <span style="color:#bd93f9">0</span>   <span style="color:#bd93f9">0</span>  hello.txt
+
+$ file hello.txt
+hello.txt: empty
+</code></pre></div><h2 id="pipes-">Pipes <code>|</code></h2>
+<p>The <strong>pipe</strong> takes the concept of <strong>redirection</strong> further. Use the pipes, we can redirect the output of one command as an input to another. Like the <strong>plumbing system</strong>, we can run a large set of commands sequentially by passing the output of one command as input to another. This concept is useful to filter or reformat  the output of commands in every stage and discard any data that is not needed.</p>
+<blockquote>
+<p>When we use <strong>pipe</strong> <code>|</code> to construct a sequence of commands, only the output of the last command may be displayed on screen. We can redirect that into an output file, if needed</p>
+</blockquote>
+<p>Let us look into simple use cases now. We will use the <code>|</code> heavily as we discuss more commands in the future</p>
+<h3 id="use-case-1-get-dd-mmmm-yyyy-from-the-date-command">Use case 1: Get <code>DD MMMM YYYY</code> from the <code>date</code> command</h3>
+<p>Let us start with a trivial example. The <code>date</code> command displays current date and time in <code>DDD DD MMM YYYY HH:MM:SS AM|PM TZ</code> format. We need to extract 11 bytes; position 5-15.  This can be done easily using <em>data format string</em>  <code>&quot;%d %b %Y&quot;</code>. Here is one way to solve it using pipes</p>
+<ul>
+<li>use <code>head -c15</code> to get bytes 1-15</li>
+<li>pipe the output to <code>tail -c11</code></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ date
+Fri <span style="color:#bd93f9">16</span> Jul <span style="color:#bd93f9">2021</span> 11:26:09 AM UTC
+
+$  date | head -c15 | tail -c11
+<span style="color:#bd93f9">16</span> Jul <span style="color:#bd93f9">2021</span>
+</code></pre></div><h3 id="use-case-2-get-record-16-20-from-a-file-and-add-line-numbers">Use case 2: Get record 16-20 from a file and add line numbers</h3>
+<p>Based on what we know already, the <code>head</code> and <code>tail</code> command can be used to see the top and bottom portion of a given file and the <code>nl</code> or <code>cat</code> command can be used to add line numbers. In this case, we have been asked to get the records 16-20 and add line numbers to the filtered output.</p>
+<p>Here is one way to solve this</p>
+<ul>
+<li><code>head -20</code> to get the first 20 records</li>
+<li>redirect the output of the <code>head -20</code> to <code>tail -5</code></li>
+<li>redirect the output to the <code>nl -s,</code> command where <code>-s,</code> adds a comma-delimiter after the line number</li>
+<li>command sequence: <code>nl FILE| head -20 | tail -5 |nl -s,</code></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># get record count</span>
+$ wc -l student.csv
+<span style="color:#bd93f9">23</span> student.csv
+
+<span style="color:#6272a4"># records 16-20 are displayed out of the 23 records</span>
+<span style="color:#6272a4"># nl is used to add the line numbers before extracting records</span>
+$ nl student.csv | head -20 | tail -5 
+<span style="color:#bd93f9">16</span>   A0000092,Kelley,Jerry,M,03,73
+<span style="color:#bd93f9">17</span>   A0000093,Massey,Brian,M,07,84
+<span style="color:#bd93f9">18</span>   A0000094,Jones,Anthony,M,05,100
+<span style="color:#bd93f9">19</span>   A0000095,Martinez,Henry,M,04,65
+<span style="color:#bd93f9">20</span>   A0000096,Martin,Lindsay,F,04,45
+</code></pre></div><p><strong>Note</strong>: The first <code>nl</code> command here is simply used to demonstrate that we are actually getting records 16-20 by numbering the records in advance. We can drop it and start with the <code>head</code> command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ head -20 student.csv| tail -5
+A0000092,Kelley,Jerry,M,03,73
+A0000093,Massey,Brian,M,07,84
+A0000094,Jones,Anthony,M,05,100
+A0000095,Martinez,Henry,M,04,65
+A0000096,Martin,Lindsay,F,04,45
+</code></pre></div><h3 id="use-case-3-get-first-10-records-excluding-header">Use case 3: Get first 10 records excluding header</h3>
+<p>The delimited files usually contain a header as first record. We need to discard the header. There are couple of ways we can do this</p>
+<p>Here is a sample file</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ head -2 student.csv
+studentId,lastName,firstName,gender,grade,score
+A0000078,Clark,Joyce,F,04,92
+</code></pre></div><p><strong>Option 1</strong>:</p>
+<ul>
+<li>use <code>tail -n +2 FILE</code> to discard the first record</li>
+<li>pipe the output to <code>head</code> command</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tail -n +2 student.csv | head 
+A0000078,Clark,Joyce,F,04,92
+A0000079,Stevenson,Laura,F,06,90
+A0000080,Jackson,Melissa,F,07,88
+...
+...
+A0000085,Smith,Lance,M,04,44
+A0000086,Arias,Corey,M,07,61
+A0000087,Nguyen,Sarah,F,06,88
+</code></pre></div><p><strong>Option 2</strong>:</p>
+<ul>
+<li>use <code>head -11 student.csv</code> to get first 11 records</li>
+<li>pipe the output to <code>tail</code> command</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ head -11 student.csv | tail
+A0000078,Clark,Joyce,F,04,92
+A0000079,Stevenson,Laura,F,06,90
+A0000080,Jackson,Melissa,F,07,88
+...
+...
+A0000085,Smith,Lance,M,04,44
+A0000086,Arias,Corey,M,07,61
+A0000087,Nguyen,Sarah,F,06,88
+</code></pre></div><h2 id="the-tee-command--and--">The <code>tee</code> command: <code>|</code> and  <code>&gt;</code></h2>
+<p>Here is one more feature before we wrap up our discussions. What if we want to view the output of a long running command while it is executing at the same time save the output in a file for future use ?</p>
+<p>From what we know already, this is how we can accomplish</p>
+<ul>
+<li>redirect the output of the command to a file <code>CMD &gt; FILE</code> or <code>CMD &gt;&gt; FILE</code></li>
+<li>open another terminal and follow the file using <code>tail -f FILE</code> or <code>tail -F FILE</code></li>
+</ul>
+<p>There is a another way. We can use the <code>tee</code> command to perform the same operation without leaving the terminal. We simply pipe the command&rsquo;s output to the <code>tee command</code> as in <code>CMD | tee FILE</code>.</p>
+<blockquote>
+<p>The <code>tee</code> command derives it name from the <strong>T-Junction</strong> in the pipelines where the flow is diverted from input into two pipes. Pretty cool, right !!</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-a</code></td>
+<td>append output to an existing file</td>
+</tr>
+</tbody>
+</table>
+<p>Here are couple of examples</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Hello&#34;</span> | tee hello.txt
+Hello
+$ cat hello.txt
+Hello
+
+$ <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Bye&#34;</span> | tee hello.txt
+Bye
+$ cat hello.txt
+Bye
+
+$ <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Hello&#34;</span> | tee hello.txt
+Hello
+$ <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Bye&#34;</span> | tee -a hello.txt
+Bye
+$ cat hello.txt
+Hello
+Bye
+</code></pre></div><h2 id="points-to-remember">Points to remember</h2>
+<ul>
+<li>keyboard and screen are the default standard input and output used by the commands</li>
+<li>screen is used for both standard output and error</li>
+<li>we can use files instead and the files can be passed as <strong>stdin</strong> or <strong>stdout</strong> using special characters</li>
+<li><code>CMD &lt; FILE</code> is the syntax to pass contents of <code>FILE</code> as <strong>stdin</strong></li>
+<li><code>CMD &gt; FILE</code> and <code>CMD 2&gt; FILE</code> are <strong>stdout</strong> and <strong>stderr</strong></li>
+<li><code>&gt;&gt;</code> and <code>2&gt;&gt;</code> are used to append the contents to an existing file</li>
+<li><code>CMD &gt; FILE 2&gt;&amp;1</code> is to redirect stdout and stderr into the same file. We can also use <code>CMD &amp;&gt; FILE</code></li>
+<li>Pipes are used to redirect output of one command as input to another</li>
+<li><code>CMD | tee FILE</code> command is used to both display contents on screen and save into FILE.</li>
+</ul>
+<h3 id="endnote">Endnote</h3>
+<p>Though this chapter packs a lot of action, we have not seen the full potential of redirection yet. We will look into the uses when we discuss file manipulation and text processing commands. This is one of the key concept to understand and internalize to use the command line better.</p>
+
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+            
+                <a class="nav nav-prev" href="/part-1/p1-ch4/" title="1.5: Permission"><i class="fa fa-chevron-left"></i></a>
+            
+            
+                <a class="nav nav-next" href="/part-1/p1-ch6/" title="1.7: Viewing Files"><i class="fa fa-chevron-right"></i></a>
+            
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1632053186"></script>
+    <script src="/js/perfect-scrollbar.min.js?1632053186"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1632053186"></script>
+    <script src="/js/jquery.sticky.js?1632053186"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1632053186"></script>
+    <script src="/js/featherlight.min.js?1632053186"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1632053186"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1632053186"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1632053186"></script>
+    
+
+  </body>
+</html>
+
